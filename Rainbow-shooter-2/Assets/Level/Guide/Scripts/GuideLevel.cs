@@ -36,7 +36,7 @@ public class GuideLevel : MonoBehaviour
 
     private void SetChanceLoot(Life[] bots)
     {
-        bots[^2].GetComponent<Loot>().GetOneHundredPercentChanceLoot();
+        bots[^1].GetComponent<Loot>().GetOneHundredPercentChanceLoot();
         StartCoroutine(StartTextAndText1());
     }
 
