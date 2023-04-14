@@ -97,15 +97,16 @@ public class LevelManager : MonoBehaviour
         SetActivePausePanel(false);
         SetActiveWaveEndPanel(false);
         SetActiveWinPanel(true);
-        FindObjectOfType<Level>().NextLevel();
+        Level.NextLevel();
         FindObjectOfType<BattlePassRewarder>(true).RewardPerLevel();
     }
 
     private void WinGame()
     {
         _isWinGame = true;
-        arrowEndGame.gameObject.SetActive(true);
+        if (arrowEndGame != null) arrowEndGame.gameObject.SetActive(true);
         textEndGame.gameObject.SetActive(true);
+        StartWinGamePanel();
     }
 
     private void SetActiveWinPanel(bool value)

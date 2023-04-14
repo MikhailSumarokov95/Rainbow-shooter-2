@@ -40,7 +40,7 @@ public class RangedWeapon : Weapon
 
         particles = spawnedParticlesPrefab.GetComponent<ParticleSystem>();
 
-        hitProbability += FindObjectOfType<Level>().CurrentLevel * increaseHitProbabilityPerLevel;
+        hitProbability += Level.CurrentLevel * increaseHitProbabilityPerLevel;
     }
 
     public override void Attack(GameObject targetObj)

@@ -1,11 +1,11 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
     [SerializeField] private TMP_Text currentLevelText;
-    public int CurrentLevel { get { return Progress.GetLevel(); } set { Progress.SetLevel(value); } }
+
+    public static int CurrentLevel { get { return Progress.GetLevel(); } set { Progress.SetLevel(value); } }
 
     private void Start()
     {
@@ -14,13 +14,8 @@ public class Level : MonoBehaviour
     }
 
     [ContextMenu("NextLevel")]
-    public void NextLevel()
+    public static void NextLevel()
     {
         CurrentLevel++;
-    }
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene(2);
     }
 }

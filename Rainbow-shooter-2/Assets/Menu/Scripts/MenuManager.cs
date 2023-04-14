@@ -1,6 +1,7 @@
 using UnityEngine;
 using GameScore;
 using InfimaGames.LowPolyShooterPack;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class MenuManager : MonoBehaviour
             FindObjectOfType<ShopAttachment>(true).SetDefaultSetting();
             FindObjectOfType<AmmunitionShop>(true).ReplenishAmmunition();
         }
-        if (!Progress.IsGuideCompleted()) FindObjectOfType<Level>().StartGame();
+        if (!Progress.IsGuideCompleted()) StartGame();
         player.gameObject.SetActive(true);
     }
 
@@ -31,5 +32,10 @@ public class MenuManager : MonoBehaviour
         if (!_platformManager.IsMobile) Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
         StateGameManager.StateGame = value ? StateGameManager.State.Pause : StateGameManager.State.Game;
         gameUI.SetActive(!value);
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(2);
     }
 }

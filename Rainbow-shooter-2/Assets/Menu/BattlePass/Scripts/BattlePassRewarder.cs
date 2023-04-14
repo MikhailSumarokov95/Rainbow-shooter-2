@@ -22,13 +22,13 @@ public class BattlePassRewarder : MonoBehaviour, IShopPurchase
     public void RewardPerPurchase()
     {
         Progress.SetBoughtBattlePass();
-        for (var i = 1; i < FindObjectOfType<Level>().CurrentLevel + 1; i++)
+        for (var i = 1; i < Level.CurrentLevel + 1; i++)
             Reward(_rewardBattlePassPerLevel[i]);
     }
 
     public void RewardPerLevel()
     {
-        var currentLevel = FindObjectOfType<Level>().CurrentLevel;
+        var currentLevel = Level.CurrentLevel;
         if (Progress.IsBoughtBattlePass())
             Reward(_rewardBattlePassPerLevel[currentLevel]);
     }
@@ -47,7 +47,7 @@ public class BattlePassRewarder : MonoBehaviour, IShopPurchase
 
     private void EnableLevelAchievementMark()
     {
-        var currentLevel = FindObjectOfType<Level>(true).CurrentLevel;
+        var currentLevel = Level.CurrentLevel;
         for (var i = 1; i < levelAchievementMark.Length; i++)
         {
             levelAchievementMark[i].CloseImage.gameObject.SetActive(!(i <= currentLevel - 1));

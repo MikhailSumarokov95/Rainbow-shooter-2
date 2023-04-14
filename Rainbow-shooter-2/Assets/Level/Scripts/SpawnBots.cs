@@ -28,7 +28,6 @@ public class SpawnBots : MonoBehaviour
 
     private Life[] _currentEnemyLife;
     private bool _isAllEnemiesKilled;
-    private Level _level;
     private int _countWave;
 
     private int _numberWave = 0;
@@ -36,8 +35,7 @@ public class SpawnBots : MonoBehaviour
 
     private void Start()
     {
-        _level = FindObjectOfType<Level>();
-        _countWave = _level.CurrentLevel > noWaveGMValidUpToLevelNumber ? countWaveInWaveGameMode : countWaveInNOWaveGM;
+        _countWave = Level.CurrentLevel > noWaveGMValidUpToLevelNumber ? countWaveInWaveGameMode : countWaveInNOWaveGM;
         StartCoroutine(StartWaves());
     }
 
@@ -69,7 +67,7 @@ public class SpawnBots : MonoBehaviour
         var enemy = new List<Life>();
         for (var i = 0; i < spawnEnemy.Length; i ++)
         {   
-            var countEnemy = (int)(spawnEnemy[i].Count + _level.CurrentLevel * plusEnemyWithLevel);
+            var countEnemy = (int)(spawnEnemy[i].Count + Level.CurrentLevel * plusEnemyWithLevel);
             for (var j = 0; j < countEnemy; j++)
             {
                 var numberSpawnPoint = Random.Range(0, spawnEnemy[i].SpawnPoints.Length);
@@ -78,7 +76,7 @@ public class SpawnBots : MonoBehaviour
                     .GetComponent<Life>());
             }
         }
-        if (_level.CurrentLevel % howManyLevelsSpawnBoss == 0)
+        if (Level.CurrentLevel % howManyLevelsSpawnBoss == 0)
             enemy.Add(SpawnBoss());
         return enemy.ToArray();
     }

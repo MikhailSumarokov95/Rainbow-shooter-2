@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChangeLevelTrigger : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class ChangeLevelTrigger : MonoBehaviour
             switch (type)
             {
                 case ChangeLevelType.GoLevel:
-                    FindObjectOfType<Level>().StartGame();
+                    SceneManager.LoadScene(2);
                     break;
                 case ChangeLevelType.GoMenu:
                     FindObjectOfType<LevelManager>().StartWinGamePanel();
