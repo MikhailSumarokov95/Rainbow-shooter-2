@@ -5,27 +5,34 @@ using static InfimaGames.LowPolyShooterPack.WeaponBehaviour;
 
 public static class Progress
 {
-    readonly static string weaponsSelected = nameof(weaponsSelected);
-    readonly static string weaponsBought = nameof(weaponsBought);
-    readonly static string money = nameof(money);
-    readonly static string level = nameof(level);
-    readonly static string battlePass = nameof(battlePass);
-    readonly static string grenades = nameof(grenades);
-    readonly static string superGrenades = nameof(superGrenades);
-    readonly static string sensitivity = nameof(sensitivity);
-    readonly static string soundVolume = nameof(soundVolume);
-    readonly static string musicVolume = nameof(musicVolume);
-    readonly static string setDefaultWeapons = nameof(setDefaultWeapons);
-    readonly static string shipAssemblyStage = nameof(shipAssemblyStage);
-    readonly static string numberPartsFoundShip = nameof(numberPartsFoundShip);
-    readonly static string kit = nameof(kit);
-    readonly static string guide = nameof(guide);
+    readonly static string weaponsSelectedTag = nameof(weaponsSelectedTag);
+    readonly static string weaponsBoughtTag = nameof(weaponsBoughtTag);
+    readonly static string moneyTag = nameof(moneyTag);
+    readonly static string levelTag = nameof(levelTag);
+    readonly static string battlePassTag = nameof(battlePassTag);
+    readonly static string grenadesTag = nameof(grenadesTag);
+    readonly static string superGrenadesTag = nameof(superGrenadesTag);
+    readonly static string sensitivityTag = nameof(sensitivityTag);
+    readonly static string soundVolumeTag = nameof(soundVolumeTag);
+    readonly static string musicVolumeTag = nameof(musicVolumeTag);
+    readonly static string setDefaultWeaponsTag = nameof(setDefaultWeaponsTag);
+    readonly static string shipAssemblyStageTag = nameof(shipAssemblyStageTag);
+    readonly static string numberPartsFoundShipTag = nameof(numberPartsFoundShipTag);
+    readonly static string kitTag = nameof(kitTag);
+    readonly static string guideTag = nameof(guideTag);
 
     public static Action OnNewSaveWeapons;
     public static Action OnNewSaveGrenade;
     public static Action OnNewSaveSuperGrenade;
     public static Action OnNewSaveSensitivity;
     public static Action OnNewSaveMoney;
+
+    private static TFG.Generic.Dictionary<Name, WeaponAttachmentsBought> _weaponsBought;
+    private static TFG.Generic.Dictionary<Name, WeaponAttachmentSelected> _weaponSelected;
+    private static int _money = -1;
+    private static int _level = -1;
+    private static int _grenades = -1;
+    private static int _superGrenades = -1;
 
     public static bool IsBoughtWeapon(Name name)
     {
@@ -311,47 +318,51 @@ public static class Progress
 
     public static void SaveSettedDefaultWeapons()
     {
-        GSPrefs.SetInt(setDefaultWeapons, 1);
+        GSPrefs.SetInt(setDefaultWeaponsTag, 1);
         GSPrefs.Save();
     }
 
     public static bool IsSetDefaultWeapons()
     {
-        return GSPrefs.GetInt(setDefaultWeapons, 0) == 1;
+        return GSPrefs.GetInt(setDefaultWeaponsTag, 0) == 1;
     }
 
     public static void SetMoney(int value)
     {
-        GSPrefs.SetInt(money, value);
+        _money = value;
+        GSPrefs.SetInt(moneyTag, value);
         GSPrefs.Save();
         OnNewSaveMoney?.Invoke();
     }
 
     public static int GetMoney()
     {
-        return GSPrefs.GetInt(money, 0);
+        if (_money == -1) _money = GSPrefs.GetInt(moneyTag, 0);
+        return _money;
     }
 
     public static void SetLevel(int value)
     {
-        GSPrefs.SetInt(level, value);
+        _level = value;
+        GSPrefs.SetInt(levelTag, value);
         GSPrefs.Save();
     }
 
     public static int GetLevel()
     {
-        return GSPrefs.GetInt(level, 1);
+        if (_level == -1) _level = GSPrefs.GetInt(levelTag, 1);
+        return _level;
     }
 
     public static void SetBoughtBattlePass()
     {
-        GSPrefs.SetInt(battlePass, 1);
+        GSPrefs.SetInt(battlePassTag, 1);
         GSPrefs.Save();
     }
 
     public static bool IsBoughtBattlePass()
     {
-        return GSPrefs.GetInt(battlePass, 0) == 1;
+        return GSPrefs.GetInt(battlePassTag, 0) == 1;
     }
 
     public static void SetBoughtKit(GSConnect.PurchaseTag purchaseTag)
@@ -367,121 +378,129 @@ public static class Progress
 
     private static string KitScrambler(GSConnect.PurchaseTag purchaseTag)
     {
-        return (kit + purchaseTag).ToString();
+        return (kitTag + purchaseTag).ToString();
     }
 
     public static void SetGrenades(int value)
     {
-        GSPrefs.SetInt(grenades, value);
+        _grenades = value;
+        GSPrefs.SetInt(grenadesTag, value);
         GSPrefs.Save();
         OnNewSaveGrenade?.Invoke();
     }
 
     public static int GetGrenades()
     {
-        return GSPrefs.GetInt(grenades, 0);
+        if (_grenades == -1) _grenades = GSPrefs.GetInt(grenadesTag, 0);
+        return _grenades;
     }
     
     public static void SetSuperGrenades(int value)
     {
-        GSPrefs.SetInt(superGrenades, value);
+        _superGrenades = value;
+        GSPrefs.SetInt(superGrenadesTag, value);
         GSPrefs.Save();
         OnNewSaveSuperGrenade?.Invoke();
     }
 
     public static int GetSuperGrenades()
     {
-        return GSPrefs.GetInt(superGrenades, 1);
+        if (_superGrenades == -1) _superGrenades = GSPrefs.GetInt(superGrenadesTag, 1);
+        return _superGrenades;
     }
 
     public static void SetSensitivity(float value)
     {
-        PlayerPrefs.SetFloat(sensitivity, value);
+        PlayerPrefs.SetFloat(sensitivityTag, value);
         OnNewSaveSensitivity?.Invoke();
     }
 
     public static float GetSensitivity()
     {
-        return PlayerPrefs.GetFloat(sensitivity, 1);
+        return PlayerPrefs.GetFloat(sensitivityTag, 1);
     }
 
     public static void SetVolume(float value)
     {
-        PlayerPrefs.SetFloat(soundVolume, value);
+        PlayerPrefs.SetFloat(soundVolumeTag, value);
     }
 
     public static float GetVolume()
     {
-        return PlayerPrefs.GetFloat(soundVolume, 1);
+        return PlayerPrefs.GetFloat(soundVolumeTag, 1);
     }
 
     public static void SetMusicVolume(float value)
     {
-        PlayerPrefs.SetFloat(musicVolume, value);
+        PlayerPrefs.SetFloat(musicVolumeTag, value);
     }
 
     public static float GetMusicVolume()
     {
-        return PlayerPrefs.GetFloat(musicVolume, 1);
+        return PlayerPrefs.GetFloat(musicVolumeTag, 1);
     }
 
     public static void SetNumberPartsFoundShip(int value)
     {
-        GSPrefs.SetInt(numberPartsFoundShip, value);
+        GSPrefs.SetInt(numberPartsFoundShipTag, value);
         GSPrefs.Save();
     }
 
     public static int GetNumberPartsFoundShip()
     {
-        return GSPrefs.GetInt(numberPartsFoundShip, 0);
+        return GSPrefs.GetInt(numberPartsFoundShipTag, 0);
     }
     
     public static void SetShipAssemblyStage(int value)
     {
-        GSPrefs.SetInt(shipAssemblyStage, value);
+        GSPrefs.SetInt(shipAssemblyStageTag, value);
         GSPrefs.Save();
     }
 
     public static int GetShipAssemblyStage()
     {
-        return GSPrefs.GetInt(shipAssemblyStage, 0);
+        return GSPrefs.GetInt(shipAssemblyStageTag, 0);
     }
 
     public static void SaveGuideCompleted()
     {
-        GSPrefs.SetInt(guide, 1);
+        GSPrefs.SetInt(guideTag, 1);
         GSPrefs.Save();
     }
 
     public static bool IsGuideCompleted()
     {
-        return GSPrefs.GetInt(guide, 0) == 1;
+        return GSPrefs.GetInt(guideTag, 0) == 1;
     }
 
     private static void SaveWeaponsSelected(TFG.Generic.Dictionary<Name, WeaponAttachmentSelected> weapons)
     {
-        GSPrefs.SetString(weaponsSelected, JsonUtility.ToJson(weapons));
+        _weaponSelected = weapons;
+        GSPrefs.SetString(weaponsSelectedTag, JsonUtility.ToJson(weapons));
         GSPrefs.Save();
         OnNewSaveWeapons?.Invoke();
     }
 
     private static TFG.Generic.Dictionary<Name, WeaponAttachmentSelected> LoadWeaponsSelected()
     {
-        return JsonUtility.FromJson<TFG.Generic.Dictionary<Name, WeaponAttachmentSelected>>
-            (GSPrefs.GetString(weaponsSelected, GetDefaultWeaponAttachmentSelected()));
+        _weaponSelected ??= JsonUtility.FromJson<TFG.Generic.Dictionary<Name, WeaponAttachmentSelected>>
+                (GSPrefs.GetString(weaponsSelectedTag, GetDefaultWeaponAttachmentSelected()));
+        return _weaponSelected;
     }
 
     private static void SaveWeaponsBought(TFG.Generic.Dictionary<Name, WeaponAttachmentsBought> weapons)
     {
-        GSPrefs.SetString(weaponsBought, JsonUtility.ToJson(weapons));
+        _weaponsBought = weapons;
+        GSPrefs.SetString(weaponsBoughtTag, JsonUtility.ToJson(weapons));
         GSPrefs.Save();
         OnNewSaveWeapons?.Invoke();
     }
 
     private static TFG.Generic.Dictionary<Name, WeaponAttachmentsBought> LoadWeaponsBought()
     {
-        return JsonUtility.FromJson<TFG.Generic.Dictionary<Name, WeaponAttachmentsBought>>
-            (GSPrefs.GetString(weaponsBought, GetDefaultWeaponAttachmentsBought()));
+        _weaponsBought ??= JsonUtility.FromJson<TFG.Generic.Dictionary<Name, WeaponAttachmentsBought>>
+            (GSPrefs.GetString(weaponsBoughtTag, GetDefaultWeaponAttachmentsBought()));
+        return _weaponsBought;
     }
 
     private static string GetDefaultWeaponAttachmentSelected()
