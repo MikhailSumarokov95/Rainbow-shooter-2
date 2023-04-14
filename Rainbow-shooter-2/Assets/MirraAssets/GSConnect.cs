@@ -178,7 +178,7 @@ public class GSConnect : MonoBehaviour {
                 }
             case MoneyReward:
                 {
-                    FindObjectOfType<Money>().MakeMoney(1000);
+                    Money.MakeMoney(1000);
                     break;
                 }
             case DoubleMoneyReward:

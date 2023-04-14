@@ -8,16 +8,10 @@ public class AmmunitionShop : MonoBehaviour
     public Action OnReplenished;
     [SerializeField] private int price;
     [SerializeField] private MaxAmmunitionWeapon[] _maxAmmunitionWeapon;
-    private Money _money;
-
-    private void Start()
-    {
-        _money = FindObjectOfType<Money>();
-    }
 
     public void BuyAmmunition()
     {
-        if (!_money.SpendMoney(price)) return;
+        if (!Money.SpendMoney(price)) return;
         ReplenishAmmunition();
     }
 

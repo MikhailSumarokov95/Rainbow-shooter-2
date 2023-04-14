@@ -25,6 +25,7 @@ public static class Progress
     public static Action OnNewSaveGrenade;
     public static Action OnNewSaveSuperGrenade;
     public static Action OnNewSaveSensitivity;
+    public static Action OnNewSaveMoney;
 
     public static bool IsBoughtWeapon(Name name)
     {
@@ -323,6 +324,7 @@ public static class Progress
     {
         GSPrefs.SetInt(money, value);
         GSPrefs.Save();
+        OnNewSaveMoney?.Invoke();
     }
 
     public static int GetMoney()

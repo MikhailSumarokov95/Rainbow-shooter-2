@@ -17,14 +17,8 @@ public abstract class SelectorAttachment : MonoBehaviour
     protected WeaponAttachmentManager _weaponAttachmentManager;
     protected int _countAttachment;
     protected int _numberAttachment;
-    protected Money _money;
     protected int _attachmentAbsenteeNumber = -1;
     protected int[] _attachmentNumberSorted;
-
-    private void Start()
-    {
-        _money = FindObjectOfType<Money>();
-    }
 
     public void InitSelectorAttachment(WeaponAttachmentManager weaponAttachmentManager, ShopAttachment shop)
     {

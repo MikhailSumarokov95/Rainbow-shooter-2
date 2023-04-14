@@ -13,7 +13,7 @@ public class SelectorMuzzle : SelectorAttachment
 
     public override void BuyAttachment()
     {
-        if (!_money.SpendMoney(cast)) return;
+        if (!Money.SpendMoney(cast)) return;
         Progress.SetBuyMuzzle(_shop.CurrentWeaponName, _currentAttachment);
         ScrollThrough(0);
     }

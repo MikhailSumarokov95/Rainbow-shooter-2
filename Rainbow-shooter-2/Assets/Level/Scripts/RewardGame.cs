@@ -29,7 +29,7 @@ public class RewardGame : MonoBehaviour
 
     public void RewardPerWave()
     {
-        FindObjectOfType<Money>().MakeMoney(_moneyPerWave);
+        Money.MakeMoney(_moneyPerWave);
         _moneyPerWave = 0;
     }
 

@@ -15,7 +15,7 @@ public class ShopWeapon : MonoBehaviour, IShopPurchase
 
     public void BuyWeaponForMoney(int price)
     {
-        if (FindObjectOfType<Money>().SpendMoney(price))
+        if (Money.SpendMoney(price))
         {
             Progress.SetBuyWeapon(nameWeapon);
             InitShop();

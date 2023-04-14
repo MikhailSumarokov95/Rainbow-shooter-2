@@ -9,7 +9,6 @@ public class GrenadeShop : MonoBehaviour
     [SerializeField] private int price;
     [SerializeField] private int maxCount = 10;
     [SerializeField] private GameObject addGrenadeImage;
-    private Money _money;
 
     private int _currentCount;
     public int CurrentCount
@@ -18,7 +17,6 @@ public class GrenadeShop : MonoBehaviour
         {
             return _currentCount;
         }
-
         set
         {
             _currentCount = value;
@@ -37,19 +35,13 @@ public class GrenadeShop : MonoBehaviour
     public void BuyOne()
     {
         if (CurrentCount >= maxCount) return;
-
-        if (_money == null) _money = FindObjectOfType<Money>(true);
-
-        if (_money.SpendMoney(price)) CurrentCount++;
+        if (Money.SpendMoney(price)) CurrentCount++;
     }
 
     public void BuyFull()
     {
-        if (_money == null) _money = FindObjectOfType<Money>(true);
-
         var priceForMax = (maxCount - CurrentCount) * price;
-
-        if (_money.SpendMoney(priceForMax))
+        if (Money.SpendMoney(priceForMax))
             CurrentCount = maxCount;
     }
 
@@ -61,7 +53,6 @@ public class GrenadeShop : MonoBehaviour
     public void RewardFull()
     {
         CurrentCount = maxCount;
-
         addGrenadeImage.SetActive(true);
     }
 }

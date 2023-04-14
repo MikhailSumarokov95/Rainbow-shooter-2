@@ -32,7 +32,7 @@ public class KitShop : MonoBehaviour, IShopPurchase
             foreach (var weapon in weapons)
                 Progress.SetBuyWeapon(weapon);
         if (amountMoney != 0)
-            FindObjectOfType<Money>().MakeMoney(amountMoney);
+            Money.MakeMoney(amountMoney);
         if (numberSkin != null)
         {
             var numbersSkin = new List<int>();

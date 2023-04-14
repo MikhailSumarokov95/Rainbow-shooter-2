@@ -12,7 +12,7 @@ public class SelectorGrip : SelectorAttachment
 
     public override void BuyAttachment()
     {
-        if (!_money.SpendMoney(cast)) return;
+        if (!Money.SpendMoney(cast)) return;
         Progress.SetBuyGrip(_shop.CurrentWeaponName, _currentAttachment);
         ScrollThrough(0);
     }

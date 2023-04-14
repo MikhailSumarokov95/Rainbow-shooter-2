@@ -39,7 +39,7 @@ public class BattlePassRewarder : MonoBehaviour, IShopPurchase
             foreach (var weapon in reward.NameWeapon)
                 Progress.SetBuyWeapon(weapon);
         if (reward.AmountMoney != 0)
-            FindObjectOfType<Money>().MakeMoney(reward.AmountMoney);
+            Money.MakeMoney(reward.AmountMoney);
         if (reward.NumberSkinWeapons != -1)
             foreach(WeaponBehaviour.Name weapon in Enum.GetValues(typeof(WeaponBehaviour.Name)))
                 Progress.SetBuySkin(weapon, reward.NumberSkinWeapons);

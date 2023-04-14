@@ -1,29 +1,24 @@
+using TMPro;
 using UnityEngine;
 
 public class Money : MonoBehaviour
 {
-    [SerializeField] private IconMoney[] iconsMoney;
+    [SerializeField] private TMP_Text moneyText;
 
-    public int AmountOfMoney
+    public static int AmountOfMoney { get { return Progress.GetMoney(); } set { Progress.SetMoney(value); } }
+
+    private void OnEnable()
     {
-        get
-        {
-            return Progress.GetMoney();
-        }
-
-        set
-        { 
-            Progress.SetMoney(value);
-            Display—hangeMoney(value);
-        }
+        SetTextMoney();
+        Progress.OnNewSaveMoney += SetTextMoney;
     }
 
-    private void Start()
+    private void OnDisable()
     {
-        AmountOfMoney = Progress.GetMoney();
+        Progress.OnNewSaveMoney -= SetTextMoney;
     }
 
-    public bool SpendMoney(int value)
+    public static bool SpendMoney(int value)
     {
         if (AmountOfMoney < value) return false;
         else
@@ -33,7 +28,7 @@ public class Money : MonoBehaviour
         }
     }
 
-    public void MakeMoney(int value)
+    public static void MakeMoney(int value)
     {
         AmountOfMoney += value;
     }
@@ -42,11 +37,9 @@ public class Money : MonoBehaviour
     {
         GSConnect.ShowRewardedAd(GSConnect.MoneyReward);
     }
-
-    private void Display—hangeMoney(int value)
+    
+    public void SetTextMoney()
     {
-        if (iconsMoney == null) return;
-        foreach (var icon in iconsMoney)
-            icon.SetMoney(value);
+        moneyText.text = AmountOfMoney.ToString();
     }
 }
