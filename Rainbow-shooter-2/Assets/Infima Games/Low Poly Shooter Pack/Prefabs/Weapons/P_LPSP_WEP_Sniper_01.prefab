@@ -551,8 +551,8 @@ MonoBehaviour:
   projectileImpulse: 400
   roundsPerMinutes: 125
   cycledReload: 1
-  canReloadWhenFull: 1
-  automaticReloadOnEmpty: 0
+  canReloadWhenFull: 0
+  automaticReloadOnEmpty: 1
   automaticReloadOnEmptyDelay: 0.25
   socketEjection: {fileID: 868494328774025956}
   canReloadAimed: 0
