@@ -13,7 +13,6 @@ public class AIBotController : MonoBehaviour
     private CapsuleCollider _targetCol;
     private BotMove _botMove;
     private Weapon _weapon;
-    private StateGameManager _stateGameManager;
     private float _timerForDo;
 
     private void Start()
@@ -22,7 +21,6 @@ public class AIBotController : MonoBehaviour
         _targetCol = _target.GetComponent<CapsuleCollider>();
         _botMove = GetComponent<BotMove>();
         _weapon = transform.GetComponentInChildren<Weapon>();
-
         RandomizerSpeed();
         _timerForDo = Random.Range(0, timeDo);
     }
@@ -30,15 +28,11 @@ public class AIBotController : MonoBehaviour
     private void Update()
     {
         if (StateGameManager.StateGame != StateGameManager.State.Game) return;
-
         if (_weapon.IsAttacking) return;
-
         _timerForDo += Time.deltaTime;
-
         if (_timerForDo < timeDo) return;
         _timerForDo = 0f;
-
-        if (DetermineIfThereObstaclesBetweenTargetAndBot() && AttackDistanceCheck())
+        if (DetermineIfThereObstaclesBetweenTargetAndBot() && IsTargetInAffectedArea())
             if (TargetVisibilityCheck()) Attack();
             else _botMove.RotateTowardsTarget();
         else _botMove.RunTowardsTarget();
@@ -55,7 +49,6 @@ public class AIBotController : MonoBehaviour
     private bool DetermineIfThereObstaclesBetweenTargetAndBot()
     {
         var sideIsTarget = GetSideIsTargetWithIndent(0.9f);
-
         for (var i = 0; i < sideIsTarget.Length; i++)
         {
             Debug.DrawRay(eyesTr.position, sideIsTarget[i] - eyesTr.position, Color.red);
@@ -82,9 +75,10 @@ public class AIBotController : MonoBehaviour
             _targetCol.transform.up * _targetCol.height / 2;
         return sideIsTarget;
     }
-
-    private bool AttackDistanceCheck()
+    
+    private bool IsTargetInAffectedArea()
     {
+        print("IsTargetInAffectedArea: " + (Vector3.Distance(transform.position, _target.position) < _weapon.DistanceAttack));
         return Vector3.Distance(transform.position, _target.position) < _weapon.DistanceAttack;
     }
 

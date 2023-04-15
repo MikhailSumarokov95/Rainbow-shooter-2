@@ -6,8 +6,6 @@ namespace Bot
     public abstract class Weapon : MonoBehaviour
     {
         protected Animator _animator;
-
-        protected bool _isPostShotDelay;
         protected bool _isReloading;
 
         public bool IsAttacking { get; protected set; }
@@ -22,16 +20,13 @@ namespace Bot
 
         public abstract void Attack(GameObject targetObj);
 
-        protected IEnumerator WaitPostShotDelay()
+        protected IEnumerator WaitingForAttackAnimationToEnd()
         {
             IsAttacking = true;
-            _isPostShotDelay = true;
-
             yield return new WaitUntil(() => _animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"));
             yield return new WaitForSecondsRealtime(_animator.GetCurrentAnimatorStateInfo(0).length);
-
-            _isPostShotDelay = false;
             IsAttacking = false;
+            _animator.SetTrigger("Wait");
         }
     }
 }

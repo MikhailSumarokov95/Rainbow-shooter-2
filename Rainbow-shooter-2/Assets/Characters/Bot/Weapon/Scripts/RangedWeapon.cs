@@ -28,46 +28,33 @@ public class RangedWeapon : Weapon
     private void Start()
     {
         base.Start();
-
         _restOfBulletInMagazine = magazineSize;
-
         //Instantiate Particles.
         GameObject spawnedParticlesPrefab = Instantiate(prefabFlashParticles, barrel);
         //Reset the position.
         spawnedParticlesPrefab.transform.localPosition = default;
         //Reset the rotation.
         spawnedParticlesPrefab.transform.localEulerAngles = default;
-
         particles = spawnedParticlesPrefab.GetComponent<ParticleSystem>();
-
         hitProbability += Level.CurrentLevel * increaseHitProbabilityPerLevel;
     }
 
     public override void Attack(GameObject targetObj)
     {
         if (_isReloading) return;
-
         if (_restOfBulletInMagazine < 1)
         {
             StartCoroutine(Reloading());
             return;
         }
-
-        if (_isPostShotDelay) return;
-
+        if (IsAttacking) return;
         Effect();
-
         _animator.SetTrigger("Attack");
-
         _restOfBulletInMagazine--;
-
-        StartCoroutine(WaitPostShotDelay());
-
+        StartCoroutine(WaitingForAttackAnimationToEnd());
         if (Random.Range(0, 100) > hitProbability) return;
-
         var targetAttack = targetObj.transform.position +
             new Vector3(0f, targetObj.GetComponent<CapsuleCollider>().height * 0.9f, 0f) - barrel.transform.position;
-
         var bullet = Instantiate(bulletPrefs, barrel.position, Quaternion.LookRotation(targetAttack));
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletImpulse;
     }
@@ -76,7 +63,6 @@ public class RangedWeapon : Weapon
     {
         if (particles != null)
             particles.Emit(flashParticlesCount);
-
         var fireAudio = Instantiate(fireAudioPref.gameObject, barrel.position, barrel.rotation);
         Destroy(fireAudio, fireAudio.GetComponent<AudioSource>().clip.length);
     }
@@ -85,10 +71,8 @@ public class RangedWeapon : Weapon
     {
         if (_animator != null) _animator.SetTrigger("Reload");
         _isReloading = true;
-
         yield return new WaitUntil(() => _animator.GetCurrentAnimatorStateInfo(0).IsName("Reload"));
         yield return new WaitForSecondsRealtime(_animator.GetCurrentAnimatorStateInfo(0).length);
-
         _isReloading = false;
         _restOfBulletInMagazine = magazineSize;
     }

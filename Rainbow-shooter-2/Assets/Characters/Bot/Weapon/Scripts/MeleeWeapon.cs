@@ -7,9 +7,9 @@ public class MeleeWeapon : Weapon
 
     public override void Attack(GameObject targetObj)
     {
-        if (_isPostShotDelay) return;
+        if (IsAttacking) return;
         targetObj.GetComponent<HealthPoints>().TakeDamage(damage);
         _animator.SetTrigger("Attack");
-        StartCoroutine(WaitPostShotDelay());
+        StartCoroutine(WaitingForAttackAnimationToEnd());
     }
 }

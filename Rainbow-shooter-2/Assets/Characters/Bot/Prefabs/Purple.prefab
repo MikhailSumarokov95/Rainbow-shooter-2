@@ -1673,7 +1673,7 @@ MonoBehaviour:
   eyesTr: {fileID: 5359559588050142642}
   angleVisibility: 5
   maxSpeedAnimation: 1.5
-  timeDo: 0.1
+  timeDo: 0.01
 --- !u!114 &4006120391761104921
 MonoBehaviour:
   m_ObjectHideFlags: 0
