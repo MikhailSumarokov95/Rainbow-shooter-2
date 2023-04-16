@@ -656,10 +656,10 @@ MonoBehaviour:
   acceleration: 12
   accelerationInAir: 1.7
   deceleration: 11
-  speedWalking: 5
+  speedWalking: 7
   speedAiming: 3
   speedCrouching: 3
-  speedRunning: 7.4
+  speedRunning: 10
   walkingMultiplierForward: 1
   walkingMultiplierSideways: 0.9
   walkingMultiplierBackwards: 0.9
@@ -739,6 +739,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 058ad0f0e88b6054990c6e98008ae4ea, type: 3}
   holdToRun: 1
   holdToAim: 1
+  speedSetRotation: 25
+  speedSetPosition: 25
 --- !u!114 &890022176346970021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,6 +1194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4706c1f65e53624a894531483ab3e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectDid: {fileID: 0}
 --- !u!114 &1672804021355800781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2704,6 +2707,7 @@ MonoBehaviour:
   yClamp: {x: -89, y: 89}
   smooth: 1
   interpolationSpeed: 45
+  speedSetRotation: 25
 --- !u!114 &272743011507593319
 MonoBehaviour:
   m_ObjectHideFlags: 0
