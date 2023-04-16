@@ -31,6 +31,12 @@ namespace GameScore
         public static void Unlock(string idOrTag) => GSAchievementsUnlock(idOrTag);
 
 
+        
+        //[DllImport("__Internal")]
+        //private static extern void GSAchievementsSetProgress(string idOrTag, string value);
+        //public static void SetProgress(string idOrTag, int value) => GSAchievementsSetProgress(idOrTag, value.ToString());
+
+
 
         public static event UnityAction OnAchievementsOpen;
         public static event UnityAction OnAchievementsClose;

@@ -4143,11 +4143,6 @@ PrefabInstance:
       propertyPath: nameWeapon
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 5373528034721390598, guid: 9482e0a2ae6a92742bbe72e00f29f763,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5567679552925350123, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
       propertyPath: isShop
@@ -4187,11 +4182,6 @@ PrefabInstance:
         type: 3}
       propertyPath: nameWeapon
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 7760006461492980381, guid: 9482e0a2ae6a92742bbe72e00f29f763,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7760006461502031227, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
@@ -4243,17 +4233,6 @@ PrefabInstance:
       propertyPath: nameWeapon
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8761746993312849190, guid: 9482e0a2ae6a92742bbe72e00f29f763,
-        type: 3}
-      propertyPath: prefabFlashLight
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8761746993312849190, guid: 9482e0a2ae6a92742bbe72e00f29f763,
-        type: 3}
-      propertyPath: prefabFlashParticles
-      value: 
-      objectReference: {fileID: 4834526503407549940, guid: 2735bebe54c1f5a4096f5134a96f7e77,
-        type: 3}
     - target: {fileID: 9184367823543550046, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
       propertyPath: scopeDefaultShow

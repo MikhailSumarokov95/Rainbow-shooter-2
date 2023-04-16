@@ -6,6 +6,7 @@ public class Achievements : MonoBehaviour
     // All this methods are called via UI - Achievements
     public void AchievementsOpen()
     {
+        print("AchievementsOpen");
         GS_Achievements.Open();
     }
 
@@ -19,4 +20,10 @@ public class Achievements : MonoBehaviour
         // Tag - COINS
         GS_Achievements.Unlock(idOrTag);
     }
+
+    //public void AchievementSetProgress()
+    //{
+    //    print("AchievementSetProgress");
+    //    GS_Achievements.SetProgress("kill10", 11);
+    //}
 }

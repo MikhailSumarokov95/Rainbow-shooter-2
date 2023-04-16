@@ -40,18 +40,6 @@ public class GSConnect : MonoBehaviour {
         MoneyReward = nameof(MoneyReward),
         DoubleMoneyReward = nameof(DoubleMoneyReward);
 
-    // Ключи для внутриигровых покупок:
-
-    //public const string
-    //    GrenadeLauncher = nameof(WeaponBehaviour.Name.GL01),
-    //    RocketLauncher = nameof(WeaponBehaviour.Name.RL01),
-    //    Battlepass = nameof(Battlepass),
-    //    SuperGrenade = nameof(SuperGrenade),
-    //    PartSpaceShip = nameof(PartSpaceShip),
-    //    KitGL = nameof(KitGL),
-    //    KitSG = nameof(KitSG),
-    //    KitAll = nameof(KitAll);
-
     /// <summary>
     /// Вызывать сразу после важных событий,
     /// чтобы сохранить изменения на сервер.
@@ -257,5 +245,10 @@ public class GSConnect : MonoBehaviour {
     /// </summary>
     public static void CreatePost(string text) {
         GS_Socials.Post(text);
+    }
+
+    public static void StartAchievementsTable()
+    {
+        GS_Achievements.Open();
     }
 }
