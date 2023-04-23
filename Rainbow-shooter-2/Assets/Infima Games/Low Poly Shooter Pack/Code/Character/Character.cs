@@ -1357,9 +1357,9 @@ namespace InfimaGames.LowPolyShooterPack
 			}
 		}
 
-		public void OnTryThrowGrenateMobile()
+		public void OnTryThrowGrenadeMobile()
 		{
-			TryThrowGrenate();
+			TryThrowGrenade();
         }
 
 		/// <summary>
@@ -1373,12 +1373,12 @@ namespace InfimaGames.LowPolyShooterPack
 			{	
 				//Performed.
 				case InputActionPhase.Performed:
-						TryThrowGrenate();
+						TryThrowGrenade();
 						break;
 				}
 		}
 
-		private void TryThrowGrenate()
+		private void TryThrowGrenade()
 		{
 			if (StateGameManager.StateGame != StateGameManager.State.Game) return;
 
@@ -1388,9 +1388,9 @@ namespace InfimaGames.LowPolyShooterPack
 
 		}
 
-        public void OnTryThrowSuperGrenateMobile()
+        public void OnTryThrowSuperGrenadeMobile()
         {
-            TryThrowSuperGrenate();
+            TryThrowSuperGrenade();
         }
 
         /// <summary>
@@ -1404,12 +1404,12 @@ namespace InfimaGames.LowPolyShooterPack
             {
                 //Performed.
                 case InputActionPhase.Performed:
-                    TryThrowSuperGrenate();
+                    TryThrowSuperGrenade();
                     break;
             }
         }
 
-        private void TryThrowSuperGrenate()
+        private void TryThrowSuperGrenade()
         {
             if (StateGameManager.StateGame != StateGameManager.State.Game) return;
 
@@ -1633,6 +1633,8 @@ namespace InfimaGames.LowPolyShooterPack
                 grenadeCount--;
 
             Progress.SetGrenades(grenadeCount);
+
+			OnThrowGrenade?.Invoke();
 			
 			//Get Camera Transform.
 			Transform cTransform = cameraWorld.transform;

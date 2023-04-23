@@ -14,8 +14,9 @@
       _unityAwaiter.done = resolve;
       _unityAwaiter.abort = reject;
     });
+	var gameScore;
     window.onGSInit = async (gs) => {
-
+	  gameScore = gs;
       #if _SHOW_PRELOADER_AD
       const showPreloaderAd = "{{{ _SHOW_PRELOADER_AD }}}";
       if (showPreloaderAd) {
@@ -108,6 +109,10 @@
       window.focus();
       canvas.focus();
     });
+	
+	function AchievementsSetProgress(idOrTag, value) {
+		gameScore.achievements.setProgress({ tag: idOrTag, progress: value });
+	}
 
   </script>
 </body>

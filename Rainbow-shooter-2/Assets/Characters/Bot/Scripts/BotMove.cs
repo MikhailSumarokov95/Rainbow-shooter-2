@@ -8,7 +8,7 @@ public class BotMove : MonoBehaviour
     private NavMeshAgent _botNMA;
     private Animator _animator;
 
-    private void Start()
+    private void Awake()
     {
         _botNMA = GetComponent<NavMeshAgent>();
         Target = GetComponent<TargetMoveBot>().GetTarget();

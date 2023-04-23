@@ -4,7 +4,7 @@ using UnityEngine;
 using static InfimaGames.LowPolyShooterPack.WeaponBehaviour;
 
 public static class Progress
-{
+{   //TODO: уйти от повторений
     readonly static string weaponsSelectedTag = nameof(weaponsSelectedTag);
     readonly static string weaponsBoughtTag = nameof(weaponsBoughtTag);
     readonly static string moneyTag = nameof(moneyTag);
@@ -20,12 +20,16 @@ public static class Progress
     readonly static string numberPartsFoundShipTag = nameof(numberPartsFoundShipTag);
     readonly static string kitTag = nameof(kitTag);
     readonly static string guideTag = nameof(guideTag);
+    readonly static string sumKillTag = nameof(sumKillTag);
+    readonly static string grenadesUsedTag = nameof(grenadesUsedTag);
+    readonly static string timePlayingTag = nameof(timePlayingTag);
 
     public static Action OnNewSaveWeapons;
     public static Action OnNewSaveGrenade;
     public static Action OnNewSaveSuperGrenade;
     public static Action OnNewSaveSensitivity;
     public static Action OnNewSaveMoney;
+    public static Action OnNewSaveSumKill;
 
     private static TFG.Generic.Dictionary<Name, WeaponAttachmentsBought> _weaponsBought;
     private static TFG.Generic.Dictionary<Name, WeaponAttachmentSelected> _weaponSelected;
@@ -33,6 +37,9 @@ public static class Progress
     private static int _level = -1;
     private static int _grenades = -1;
     private static int _superGrenades = -1;
+    private static int _sumKill = -1;
+    private static int _grenadesUsed = -1;
+    private static int _timePlaying = -1;
 
     public static bool IsBoughtWeapon(Name name)
     {
@@ -471,6 +478,51 @@ public static class Progress
     public static bool IsGuideCompleted()
     {
         return GSPrefs.GetInt(guideTag, 0) == 1;
+    }
+
+    public static void SaveSumKill(int value)
+    {
+        _sumKill = value;
+        GSPrefs.SetInt(sumKillTag, value);
+        GSPrefs.Save();
+        OnNewSaveSumKill?.Invoke();
+    }
+
+    public static void SaveIncrementSumKill()
+    {
+        SaveSumKill(GetSumKill() + 1);
+    }
+
+    public static int GetSumKill()
+    {
+        if (_sumKill == -1) _sumKill = GSPrefs.GetInt(sumKillTag, 0);
+        return _sumKill;
+    }
+
+    public static void SaveGrenadeUsed(int value)
+    {
+        _grenadesUsed = value;
+        GSPrefs.SetInt(grenadesUsedTag, value);
+        GSPrefs.Save();
+    }
+
+    public static int GetGrenadesUsed()
+    {
+        if (_grenadesUsed == -1) _grenadesUsed = GSPrefs.GetInt(grenadesUsedTag, 0);
+        return _grenadesUsed;
+    }
+    
+    public static void SaveTimePlaying(int value)
+    {
+        _timePlaying = value;
+        GSPrefs.SetInt(timePlayingTag, value);
+        GSPrefs.Save();
+    }
+
+    public static int GetTimePlaying()
+    {
+        if (_timePlaying == -1) _timePlaying = GSPrefs.GetInt(timePlayingTag, 0);
+        return _timePlaying;
     }
 
     private static void SaveWeaponsSelected(TFG.Generic.Dictionary<Name, WeaponAttachmentSelected> weapons)

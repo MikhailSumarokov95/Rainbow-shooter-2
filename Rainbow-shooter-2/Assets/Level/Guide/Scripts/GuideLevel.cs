@@ -7,7 +7,6 @@ public class GuideLevel : MonoBehaviour
     [SerializeField] private TMP_Text text;
     [SerializeField] private TMP_Text text1;
     [SerializeField] private TMP_Text text2;
-    private SpawnBots _spawnBots;
 
     private void OnEnable()
     {
@@ -16,15 +15,14 @@ public class GuideLevel : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        _spawnBots = FindObjectOfType<SpawnBots>();
-        _spawnBots.OnWaveSpawned += SetChanceLoot;
-        _spawnBots.OnWavesOver += StartText2;
+        GameMode.OnSpawnedEnemies += SetChanceLoot;
+        GameMode.OnWavesOver += StartText2;
     }
     
     private void OnDisable()
     {
-        if (_spawnBots != null) _spawnBots.OnWaveSpawned -= SetChanceLoot;
-        if (_spawnBots != null) _spawnBots.OnWavesOver -= StartText2;
+        GameMode.OnSpawnedEnemies -= SetChanceLoot;
+        GameMode.OnWavesOver -= StartText2;
     }
 
     private void Start()

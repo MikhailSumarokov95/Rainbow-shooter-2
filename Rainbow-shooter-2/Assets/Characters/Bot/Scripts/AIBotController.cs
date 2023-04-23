@@ -78,7 +78,6 @@ public class AIBotController : MonoBehaviour
     
     private bool IsTargetInAffectedArea()
     {
-        print("IsTargetInAffectedArea: " + (Vector3.Distance(transform.position, _target.position) < _weapon.DistanceAttack));
         return Vector3.Distance(transform.position, _target.position) < _weapon.DistanceAttack;
     }
 

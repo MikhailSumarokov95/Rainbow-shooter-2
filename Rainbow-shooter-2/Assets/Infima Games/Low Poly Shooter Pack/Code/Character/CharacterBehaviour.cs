@@ -1,6 +1,7 @@
 ﻿//Copyright 2022, Infima Games. All Rights Reserved.
 
 using UnityEngine;
+using System;
 
 namespace InfimaGames.LowPolyShooterPack
 {
@@ -9,6 +10,8 @@ namespace InfimaGames.LowPolyShooterPack
     /// </summary>
     public abstract class CharacterBehaviour : MonoBehaviour
     {
+        public Action OnThrowGrenade;
+
         #region UNITY
 
         /// <summary>

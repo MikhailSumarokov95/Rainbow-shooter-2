@@ -25,7 +25,6 @@ public class Life : MonoBehaviour
             }
             GetComponent<NavMeshAgent>().enabled = false;
             GetComponent<Collider>().enabled = false;
-            FindObjectOfType<KillCounter>().AddKilled();
             var effect = Instantiate(effectDid, transform.position, transform.rotation);
             Destroy(gameObject);
         }

@@ -263,9 +263,9 @@ mergeInto(LibraryManager.library, {
     GSAchievementsUnlock: function (idOrTag) {
         GameScore.AchievementsUnlock(UTF8ToString(idOrTag));
     },
-	/* GSAchievementsSetProgress: function (idOrTag, value) {
-        GameScore.AchievementsSetProgress(UTF8ToString(idOrTag), UTF8ToString(value));
-    }, */
+	GSAchievementsSetProgress: function (idOrTag, value) {
+        AchievementsSetProgress(UTF8ToString(idOrTag), value);
+    }, 
     /* ACHIEVEMENTS */
 
 

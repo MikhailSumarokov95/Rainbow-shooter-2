@@ -31,10 +31,10 @@ namespace GameScore
         public static void Unlock(string idOrTag) => GSAchievementsUnlock(idOrTag);
 
 
-        
-        //[DllImport("__Internal")]
-        //private static extern void GSAchievementsSetProgress(string idOrTag, string value);
-        //public static void SetProgress(string idOrTag, int value) => GSAchievementsSetProgress(idOrTag, value.ToString());
+
+        [DllImport("__Internal")]
+        private static extern void GSAchievementsSetProgress(string idOrTag, int value);
+        public static void SetProgress(string idOrTag, int value) => GSAchievementsSetProgress(idOrTag, value);
 
 
 
@@ -106,5 +106,6 @@ namespace GameScore
         public int playerId;
         public int achievementId;
         public string createdAt;
+        public int progress;
     }
 }

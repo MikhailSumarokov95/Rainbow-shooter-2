@@ -5,7 +5,8 @@ public class ChangeLevelTrigger : MonoBehaviour
 {
     public enum ChangeLevelType
     {
-        GoLevel,
+        GoLevelWaveMode,
+        GoLevelSurvivalMode,
         GoMenu
     }
 
@@ -17,8 +18,11 @@ public class ChangeLevelTrigger : MonoBehaviour
         {
             switch (type)
             {
-                case ChangeLevelType.GoLevel:
+                case ChangeLevelType.GoLevelWaveMode:
                     SceneManager.LoadScene(2);
+                    break;
+                case ChangeLevelType.GoLevelSurvivalMode:
+                    SceneManager.LoadScene(3);
                     break;
                 case ChangeLevelType.GoMenu:
                     FindObjectOfType<LevelManager>().StartWinGamePanel();

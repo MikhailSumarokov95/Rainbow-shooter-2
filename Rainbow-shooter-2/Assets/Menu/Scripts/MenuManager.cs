@@ -17,7 +17,7 @@ public class MenuManager : MonoBehaviour
             FindObjectOfType<ShopAttachment>(true).SetDefaultSetting();
             FindObjectOfType<AmmunitionShop>(true).ReplenishAmmunition();
         }
-        if (!Progress.IsGuideCompleted()) StartGame();
+        //if (!Progress.IsGuideCompleted()) StartGame();
         player.gameObject.SetActive(true);
     }
 

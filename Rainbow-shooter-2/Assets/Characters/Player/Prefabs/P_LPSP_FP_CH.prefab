@@ -515,7 +515,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179142080172018896}
-  m_LocalRotation: {x: -0, y: -0.7219784, z: -0, w: -0.6919156}
+  m_LocalRotation: {x: 0, y: 0.7219776, z: 0, w: 0.69191647}
   m_LocalPosition: {x: 43.6, y: 0, z: 65.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -525,7 +525,7 @@ Transform:
   - {fileID: 4071130886880857461}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -87.564, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 92.436, z: 0}
 --- !u!143 &8407989556956371183
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1122,8 +1122,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3922840206599776121}
         m_TargetAssemblyTypeName: InfimaGames.LowPolyShooterPack.Character, Assembly-CSharp
-        m_MethodName: OnTryThrowSuperGrenateMobile
-        m_Mode: 1
+        m_MethodName: OnTryThrowSuperGrenade
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

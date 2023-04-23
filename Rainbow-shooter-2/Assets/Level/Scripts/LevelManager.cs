@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using static StateGameManager;
 
 public class LevelManager : MonoBehaviour
 {
@@ -9,37 +10,34 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject waveEndPanel;
     [SerializeField] private GameObject lossPanel;
     [SerializeField] private GameObject[] shopBanners;
-    [SerializeField] private TMP_Text currentWaveText;
-    [SerializeField] private GameObject arrowEndGame;
-    [SerializeField] private TMP_Text textEndGame;
-    private SpawnBots _spawnManager;
     private PlatformManager _platformManager;
     private bool _isWinGame;
+    private GameMode _gameMode;
 
     private void OnEnable()
     {
-        _spawnManager = FindObjectOfType<SpawnBots>();
-        _spawnManager.OnWavesOver += WinGame;
-        _spawnManager.OnWaveEnd += EndWave;
+        _gameMode = FindObjectOfType<GameMode>();
+        GameMode.OnWavesOver += WinGame;
+        GameMode.OnWaveEnd += EndWave;
     }
 
     private void OnDisable()
     {
-        _spawnManager.OnWavesOver -= WinGame;
-        _spawnManager.OnWaveEnd -= EndWave;
+        GameMode.OnWavesOver -= WinGame;
+        GameMode.OnWaveEnd -= EndWave;
     }
 
     private void Start()
     {
         _platformManager = FindObjectOfType<PlatformManager>();
         OnPause(false);
-        StateGameManager.StateGame = StateGameManager.State.Game;
-        if (currentWaveText != null) currentWaveText.text = 1.ToString();
+        StateGame = State.Game;
+        _gameMode.StartNewWave();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && StateGameManager.StateGame == StateGameManager.State.Game)
+        if (Input.GetKeyDown(KeyCode.Escape) && StateGame == State.Game)
             SetActivePausePanel(true);
     }
 
@@ -64,7 +62,7 @@ public class LevelManager : MonoBehaviour
     public void Did()
     {
         OnPause(true);
-        StateGameManager.StateGame = StateGameManager.State.Pause;
+        StateGame = State.Pause;
         lossPanel.SetActive(true);
         shopBanners[Random.Range(0, shopBanners.Length)].gameObject.SetActive(true);
     }
@@ -72,15 +70,14 @@ public class LevelManager : MonoBehaviour
     public void Respawn()
     {
         OnPause(false);
-        StateGameManager.StateGame = StateGameManager.State.Game;
+        StateGame = State.Game;
         lossPanel.SetActive(false);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Life>().Respawn();
     }
 
     public void SetActivePausePanel(bool value)
     {
-        if (value) StateGameManager.StateGame = StateGameManager.State.Pause;
-        else StateGameManager.StateGame = StateGameManager.State.Game;
+        StateGame = value ? State.Pause : State.Game;
         pausePanel.SetActive(value);
         OnPause(value);
     }
@@ -95,24 +92,28 @@ public class LevelManager : MonoBehaviour
         if (!_isWinGame) return;
         GSConnect.ShowMidgameAd();
         SetActivePausePanel(false);
-        SetActiveWaveEndPanel(false);
         SetActiveWinPanel(true);
         Level.NextLevel();
         FindObjectOfType<BattlePassRewarder>(true).RewardPerLevel();
     }
 
+    public void SetActiveWaveEndPanel(bool value)
+    {
+        StateGame = value ? State.WaveEnd : State.Game;
+        waveEndPanel.SetActive(value);
+        OnPause(value);
+        if (!value) _gameMode.StartNewWave();
+    }
+
     private void WinGame()
     {
         _isWinGame = true;
-        if (arrowEndGame != null) arrowEndGame.gameObject.SetActive(true);
-        textEndGame.gameObject.SetActive(true);
         StartWinGamePanel();
     }
 
     private void SetActiveWinPanel(bool value)
     {
-        if (value) StateGameManager.StateGame = StateGameManager.State.GameOver;
-        else StateGameManager.StateGame = StateGameManager.State.Game;
+        StateGame = value ? State.GameOver : State.Game;
         winGamePanel.SetActive(value);
         shopBanners[Random.Range(0, shopBanners.Length)].gameObject.SetActive(true);
         OnPause(value);
@@ -123,16 +124,6 @@ public class LevelManager : MonoBehaviour
         GSConnect.ShowMidgameAd();
         SetActivePausePanel(false);
         SetActiveWaveEndPanel(true);
-    }
-
-    private void SetActiveWaveEndPanel(bool value)
-    {
-        if (value) StateGameManager.StateGame = StateGameManager.State.WaveEnd;
-        else StateGameManager.StateGame = StateGameManager.State.Game;
-        waveEndPanel.SetActive(value);
-        if (!value && currentWaveText != null)
-            currentWaveText.text = (int.Parse(currentWaveText.text) + 1).ToString();
-        OnPause(value);
     }
 
     private void OnPause(bool value)

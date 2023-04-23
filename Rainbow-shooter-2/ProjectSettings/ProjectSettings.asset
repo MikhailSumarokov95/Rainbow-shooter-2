@@ -530,6 +530,7 @@ PlayerSettings:
   openGLRequireES32: 0
   m_TemplateCustomTags:
     PROJECT_ID: 4675
+    SHOW_DIAGNOSTICS: 
     TOKEN: AvxsorqfavcgrBfHl8aQvFlu6jYSqMJ4
     _SHOW_PRELOADER_AD: true
   mobileMTRendering:

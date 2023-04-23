@@ -39,6 +39,41 @@ public class GSConnect : MonoBehaviour {
         ContinueReward = nameof(ContinueReward),
         MoneyReward = nameof(MoneyReward),
         DoubleMoneyReward = nameof(DoubleMoneyReward);
+    
+    /// <summary>
+    /// Имя игрока в GameScore.
+    /// Отображается в лидерборде.
+    /// </summary>
+    public static string Name
+    {
+        get
+        {
+            return GS_Player.GetName();
+        }
+        set
+        {
+            GS_Player.SetName(value);
+        }
+    }
+
+    /// <summary>
+    /// Очки опыта игрока в GameScore.
+    /// Отображаются в лидерборде.
+    /// Критерий для сортировки.
+    /// </summary>
+    public static int Score
+    {
+        get
+        {
+            if (Application.isEditor) return 0;
+            return (int)GS_Player.GetScore();
+        }
+        set
+        {
+            if (Application.isEditor) return;
+            GS_Player.SetScore(value);
+        }
+    }
 
     /// <summary>
     /// Вызывать сразу после важных событий,
@@ -245,10 +280,5 @@ public class GSConnect : MonoBehaviour {
     /// </summary>
     public static void CreatePost(string text) {
         GS_Socials.Post(text);
-    }
-
-    public static void StartAchievementsTable()
-    {
-        GS_Achievements.Open();
     }
 }
