@@ -11,7 +11,7 @@ public class ActionPoint : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             UIElement.SetActive(true);
-            FindObjectOfType<MenuManager>().OnPause(true);
+            //FindObjectOfType<MenuManager>().OnPause(true);
             collision.GetComponent<Character>().SetPositionAndRotation(pointStayPlayer);
         }
     }
