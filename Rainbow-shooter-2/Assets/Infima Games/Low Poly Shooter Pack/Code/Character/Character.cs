@@ -1749,7 +1749,9 @@ namespace InfimaGames.LowPolyShooterPack
 			knife.SetActive(active != 0);
 		}
 
-		private void LoadSaveGrenade()
+		public override void IncreaseDamageByPercentage(int percentage) => inventory.IncreaseDamageByPercentage(percentage);
+
+        private void LoadSaveGrenade()
         {
 			grenadeCount = Progress.GetGrenades();
 		}

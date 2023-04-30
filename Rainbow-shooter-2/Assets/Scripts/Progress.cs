@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static InfimaGames.LowPolyShooterPack.WeaponBehaviour;
+using static SkinsShop;
 
 public static class Progress
 {   //TODO: уйти от повторений
@@ -23,6 +26,9 @@ public static class Progress
     readonly static string sumKillTag = nameof(sumKillTag);
     readonly static string grenadesUsedTag = nameof(grenadesUsedTag);
     readonly static string timePlayingTag = nameof(timePlayingTag);
+    readonly static string selectedBuffsTag = nameof(selectedBuffsTag);
+    readonly static string skinsBoughtTag = nameof(skinsBoughtTag);
+    readonly static string skinsSelectedTag = nameof(skinsSelectedTag);
 
     public static Action OnNewSaveWeapons;
     public static Action OnNewSaveGrenade;
@@ -40,6 +46,9 @@ public static class Progress
     private static int _sumKill = -1;
     private static int _grenadesUsed = -1;
     private static int _timePlaying = -1;
+    private static TFG.Generic.Dictionary<Buff, int> _selectedBuffs;
+    private static SkinsPlayerBought _skinsBought;
+    private static string _skinSelected;
 
     public static bool IsBoughtWeapon(Name name)
     {
@@ -525,6 +534,68 @@ public static class Progress
         return _timePlaying;
     }
 
+    public static void SaveSelectedBuffs(TFG.Generic.Dictionary<Buff, int> buffs)
+    {
+        _selectedBuffs = buffs;
+        GSPrefs.SetString(selectedBuffsTag, JsonUtility.ToJson(buffs));
+        GSPrefs.Save();
+    }
+
+    public static TFG.Generic.Dictionary<Buff, int> GetSelectedBuffs()
+    {
+        _selectedBuffs ??= JsonUtility.FromJson<TFG.Generic.Dictionary<Buff, int>>
+            (GSPrefs.GetString(selectedBuffsTag, new TFG.Generic.Dictionary<Buff, int>().ToString()));
+        return _selectedBuffs;
+    }
+
+    public static void SaveBoughtSkinPlayer(string nameSkin)
+    {
+        var skinsBought = GetBoughtSkinsPlayer();
+        skinsBought.Add(nameSkin);
+        SaveBoughtSkinsPlayer(skinsBought);
+    }
+
+    public static bool IsBoughtSkinPlayer(string nameSkin)
+    {
+        var skinBought = GetBoughtSkinsPlayer();
+        foreach (var skin in skinBought)
+            if (skin == nameSkin) return true;
+        return false;
+    }
+
+    public static void SaveBoughtSkinsPlayer(List<string> nameSkins)
+    {
+        _skinsBought = new SkinsPlayerBought { Name = nameSkins };
+        GSPrefs.SetString(skinsBoughtTag, JsonUtility.ToJson(_skinsBought));
+        GSPrefs.Save();
+    }
+
+    public static List<string> GetBoughtSkinsPlayer()
+    {
+        _skinsBought ??= JsonUtility.FromJson<SkinsPlayerBought>
+            (GSPrefs.GetString(skinsBoughtTag,
+            JsonUtility.ToJson(new SkinsPlayerBought { Name = new List<string>() { "empty" } })));
+        return _skinsBought.Name;
+    }
+
+    public static bool IsSelectedSkinPlayer(string nameSkin)
+    {
+        return GetSelectedSkinPlayer() == nameSkin;
+    }
+
+    public static string GetSelectedSkinPlayer()
+    {
+        _skinSelected ??= GSPrefs.GetString(skinsSelectedTag, "");
+        return _skinSelected;
+    }
+
+    public static void SaveSelectedSkinPlayer(string nameSkin)
+    {
+        _skinSelected = nameSkin;
+        GSPrefs.SetString(skinsSelectedTag, nameSkin);
+        GSPrefs.Save();
+    }
+
     private static void SaveWeaponsSelected(TFG.Generic.Dictionary<Name, WeaponAttachmentSelected> weapons)
     {
         _weaponSelected = weapons;
@@ -602,5 +673,11 @@ public static class Progress
         public List<int> GripIndex;
         public List<int> SkinIndex;
         public int AmmunitionSum;
+    }
+
+    [Serializable]
+    private class SkinsPlayerBought
+    {
+        public List<string> Name;
     }
 }

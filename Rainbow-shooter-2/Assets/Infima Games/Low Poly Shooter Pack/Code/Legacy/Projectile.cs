@@ -2,12 +2,11 @@
 
 using UnityEngine;
 using System.Collections;
-using InfimaGames.LowPolyShooterPack;
 using Random = UnityEngine.Random;
 
 namespace InfimaGames.LowPolyShooterPack.Legacy
 {
-	public class Projectile : MonoBehaviour
+	public class Projectile : MonoBehaviour, IProjectileBuffs
 	{
 		[SerializeField] private int damage = 5;
 
@@ -39,7 +38,11 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 
 			//Start destroy timer
 			StartCoroutine(DestroyAfter());
+
+			print("Damage: " + Damage);
 		}
+
+		public void IncreaseDamageByPercentage(int percentage) => damage = (damage + ((damage * percentage) / 100));
 
         //If the bullet collides with anything
         private void OnCollisionEnter(Collision collision)

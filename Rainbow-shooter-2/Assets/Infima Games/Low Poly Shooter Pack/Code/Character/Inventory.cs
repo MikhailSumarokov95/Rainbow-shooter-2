@@ -80,7 +80,13 @@ namespace InfimaGames.LowPolyShooterPack
             //Return.
             return equipped;
         }
-        
+
+        public override void IncreaseDamageByPercentage(int percentage)
+        {
+            foreach (WeaponBehaviour weapon in weapons)
+                weapon.IncreaseDamageByPercentage(percentage);
+        }
+
         #endregion
 
         #region Getters

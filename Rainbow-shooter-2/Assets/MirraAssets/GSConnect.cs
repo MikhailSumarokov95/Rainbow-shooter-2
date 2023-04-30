@@ -14,7 +14,11 @@ public class GSConnect : MonoBehaviour {
         PartSpaceShip,
         KitAll,
         KitRL,
-        KitGL
+        KitGL,
+        Clown,
+        Chicken,
+        Hat,
+        Tiger
     }
 
     static GSConnect instance;

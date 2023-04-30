@@ -198,6 +198,8 @@ namespace InfimaGames.LowPolyShooterPack
 
         public abstract void SetActiveKnife(int active);
 
+        public abstract void IncreaseDamageByPercentage(int percentage);
+
         #endregion
     }
 }

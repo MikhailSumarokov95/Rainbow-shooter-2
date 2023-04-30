@@ -112,6 +112,8 @@ namespace InfimaGames.LowPolyShooterPack
         /// </summary>
         public abstract void TryToggleCrouch();
 
+        public abstract void IncreaseSpeedByPercentage(int percentage);
+
         #endregion
     }
 }

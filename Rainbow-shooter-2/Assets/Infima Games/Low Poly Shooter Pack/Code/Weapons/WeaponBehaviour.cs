@@ -193,6 +193,8 @@ namespace InfimaGames.LowPolyShooterPack
 
         public abstract int GetDamageProjectile();
 
+        public abstract void IncreaseDamageByPercentage(int percentage);
+
         public abstract Name GetName();
 
         #endregion

@@ -201,9 +201,11 @@ namespace InfimaGames.LowPolyShooterPack
         /// </summary>
         private Transform playerCamera;
 
-        private AmmunitionShop[] _ammunitionShop;
+        private AmmunitionShop[] ammunitionShop;
 
-        private float _colliderRadiusCharacter;
+        private float colliderRadiusCharacter;
+
+        private int increaseDamageByPercentage = 0;
 
         #endregion
 
@@ -225,7 +227,7 @@ namespace InfimaGames.LowPolyShooterPack
             //Cache the world camera. We use this in line traces.
             playerCamera = characterBehaviour.GetCameraWorld().transform;
 
-            _colliderRadiusCharacter = characterBehaviour.GetComponent<CapsuleCollider>().radius;
+            colliderRadiusCharacter = characterBehaviour.GetComponent<CapsuleCollider>().radius;
         }
 
         protected void OnEnable()
@@ -432,6 +434,11 @@ namespace InfimaGames.LowPolyShooterPack
 
             else return -1;
         }
+        
+        public override void IncreaseDamageByPercentage(int percentage)
+        {
+            increaseDamageByPercentage = percentage;
+        }
 
         public override Name GetName() => nameWeapon;
 
@@ -490,10 +497,12 @@ namespace InfimaGames.LowPolyShooterPack
                 //Convert to world space.
                 spreadValue = playerCamera.TransformDirection(spreadValue);
 
-                var offset = playerCamera.forward * _colliderRadiusCharacter * 2f;
+                var offset = playerCamera.forward * colliderRadiusCharacter * 2f;
 
                 //Spawn projectile from the projectile spawn point.
                 GameObject projectile = Instantiate(prefabProjectile, playerCamera.position + offset, Quaternion.Euler(playerCamera.eulerAngles + spreadValue));
+
+                projectile.GetComponent<IProjectileBuffs>().IncreaseDamageByPercentage(increaseDamageByPercentage);
                
                 //Add velocity to the projectile.
                 projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * projectileImpulse;

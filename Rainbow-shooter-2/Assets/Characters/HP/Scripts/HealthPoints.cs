@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using static SkinsShop;
 
 public class HealthPoints : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class HealthPoints : MonoBehaviour
     private Life _life;
 
     [SerializeField] private int maxHealth;
-    public int MaxHealth { get { return maxHealth; } }
+    public int MaxHealth { get { return maxHealth; } private set { maxHealth = value; } }
 
     private bool _isHit;
     public bool IsHit { get { return _isHit;  } set { _isHit = value; } }
@@ -27,7 +28,7 @@ public class HealthPoints : MonoBehaviour
         { 
             return currentHealth; 
         } 
-        set 
+        private set 
         {
             currentHealth = Mathf.Clamp(value, 0, maxHealth);
             if (healthBar != null) healthBar.value = currentHealth;
@@ -48,16 +49,13 @@ public class HealthPoints : MonoBehaviour
         var remainingHealth = CurrentHealth - damage;
         if (remainingHealth <= 0) ToDead();
         CurrentHealth = remainingHealth;
-
         if (takeDamageSoundPref != null)
         {
             var soundTakeDamage = Instantiate(takeDamageSoundPref, transform.position, transform.rotation);
             Destroy(soundTakeDamage, soundTakeDamage.GetComponent<AudioSource>().clip.length);
         }
-
         if (!_corotuneDelayTimerAfterHit) 
             StartCoroutine(DelayTimerAfterHit());
-
         OnTakeDamage?.Invoke();
     }
 
@@ -68,11 +66,16 @@ public class HealthPoints : MonoBehaviour
         else CurrentHealth = remainingHealth;
     }
 
+    public void IncreaseMaxHealth(int percentage)
+    {
+        MaxHealth = MaxHealth + ((MaxHealth * percentage) / 100);
+        TakeHealth(maxHealth);
+    }
+
     private void ToDead()
     {
         if (!gameObject.CompareTag("Player"))
             GetComponent<Animator>().SetTrigger("Did");
-
         GetComponent<Life>().Did();
     }
 

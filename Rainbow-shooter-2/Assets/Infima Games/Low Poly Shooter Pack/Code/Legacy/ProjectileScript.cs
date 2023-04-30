@@ -5,7 +5,7 @@ using System.Collections;
 
 namespace InfimaGames.LowPolyShooterPack.Legacy
 {
-	public class ProjectileScript : MonoBehaviour
+	public class ProjectileScript : MonoBehaviour, IProjectileBuffs
 	{
 		[SerializeField] private int damage = 20;
 
@@ -95,9 +95,11 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 			}
 		}
 
-		//Used for when the rocket is flying into the sky for example, 
-		//it should blow up after some time
-		private IEnumerator ExplodeSelf()
+        public void IncreaseDamageByPercentage(int percentage) => damage = (damage + ((damage * percentage) / 100));
+
+        //Used for when the rocket is flying into the sky for example, 
+        //it should blow up after some time
+        private IEnumerator ExplodeSelf()
 		{
 			//Wait set amount of time
 			yield return new WaitForSeconds(explodeAfter);

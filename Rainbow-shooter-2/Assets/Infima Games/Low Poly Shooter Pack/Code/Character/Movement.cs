@@ -244,6 +244,8 @@ namespace InfimaGames.LowPolyShooterPack
 
         #region METHODS
 
+
+
         /// <summary>
         /// Moves the character.
         /// </summary>
@@ -403,6 +405,15 @@ namespace InfimaGames.LowPolyShooterPack
         /// Try Toggle Crouch.
         /// </summary>
         public override void TryToggleCrouch() => TryCrouch(!crouching);
+
+        public override void IncreaseSpeedByPercentage(int percentage)
+        {
+            speedWalking = speedWalking + ((speedWalking * percentage) / 100);
+            speedAiming = speedAiming + ((speedAiming * percentage) / 100);
+            speedCrouching = speedCrouching + ((speedCrouching * percentage) / 100);
+            speedRunning = speedRunning + ((speedRunning * percentage) / 100);
+        }
+
         /// <summary>
         /// Tries to un-crouch the character.
         /// </summary>

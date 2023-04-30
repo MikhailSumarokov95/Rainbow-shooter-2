@@ -50,6 +50,8 @@ namespace InfimaGames.LowPolyShooterPack
         /// <returns>Weapon that was just equipped.</returns>
         public abstract WeaponBehaviour Equip(int index);
 
+        public abstract void IncreaseDamageByPercentage(int percentage);
+
         #endregion
     }
 }
