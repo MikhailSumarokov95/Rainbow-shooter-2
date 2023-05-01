@@ -8,12 +8,15 @@ public class PickUp : MonoBehaviour
         {
             var health = GetComponent<HealthPoints>();
             health.TakeHealth(health.MaxHealth);
-
             Destroy(other.gameObject);
         }
-        
         if (other.CompareTag("PartSpaceShip"))
         {
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("Ammunition"))
+        {
+            other.GetComponent<AmmunitionShop>().ReplenishAmmunition();
             Destroy(other.gameObject);
         }
     }

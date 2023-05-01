@@ -29,7 +29,9 @@ public class Spawner : MonoBehaviour
         {
             var numberSpawnPoint = Random.Range(0, spawnObject.SpawnPoints.Length);
             var spawnPoint = spawnObject.SpawnPoints[numberSpawnPoint];
-            obj.Add(Instantiate(spawnObject.ObjectPrefs, spawnPoint.position, spawnPoint.rotation));
+            obj.Add(Instantiate(spawnObject.ObjectPrefs, 
+                spawnPoint.position + spawnObject.ObjectPrefs.transform.position, 
+                spawnPoint.rotation * spawnObject.ObjectPrefs.transform.rotation));
         }
         return obj;
     }
