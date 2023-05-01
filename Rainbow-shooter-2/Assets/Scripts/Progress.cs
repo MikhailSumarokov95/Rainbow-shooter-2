@@ -1,8 +1,9 @@
+using GameScore;
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
-using UnityEngine.UIElements;
 using static InfimaGames.LowPolyShooterPack.WeaponBehaviour;
 using static SkinsShop;
 
@@ -49,6 +50,9 @@ public static class Progress
     private static TFG.Generic.Dictionary<Buff, int> _selectedBuffs;
     private static SkinsPlayerBought _skinsBought;
     private static string _skinSelected;
+    private static DailyProgress _dailyKill;
+    private static DailyProgress _dailyGrenade;
+    private static DailyProgress _dailyTimePlaying;
 
     public static bool IsBoughtWeapon(Name name)
     {
@@ -544,8 +548,13 @@ public static class Progress
     public static TFG.Generic.Dictionary<Buff, int> GetSelectedBuffs()
     {
         _selectedBuffs ??= JsonUtility.FromJson<TFG.Generic.Dictionary<Buff, int>>
-            (GSPrefs.GetString(selectedBuffsTag, new TFG.Generic.Dictionary<Buff, int>().ToString()));
+            (GSPrefs.GetString(selectedBuffsTag, GetDefaultSelectedBuffsJSON()));
         return _selectedBuffs;
+    }
+
+    private static string GetDefaultSelectedBuffsJSON()
+    {
+        return JsonUtility.ToJson(new TFG.Generic.Dictionary<Buff, int>());
     }
 
     public static void SaveBoughtSkinPlayer(string nameSkin)
@@ -595,6 +604,18 @@ public static class Progress
         GSPrefs.SetString(skinsSelectedTag, nameSkin);
         GSPrefs.Save();
     }
+
+    public static void SaveDailyKill(int value) => SaveDaily(ref _dailyKill, nameof(_dailyKill), value);
+
+    public static int GetDailyKill() => LoadDaily(ref _dailyKill, nameof(_dailyKill)).Progress;
+    
+    public static void SaveDailyGrenade(int value) => SaveDaily(ref _dailyGrenade, nameof(_dailyGrenade), value);
+
+    public static int GetDailyGrenade() => LoadDaily(ref _dailyGrenade, nameof(_dailyGrenade)).Progress;
+    
+    public static void SaveDailyTimePlaying(int value) => SaveDaily(ref _dailyTimePlaying, nameof(_dailyTimePlaying), value);
+
+    public static int GetDailyTimePlaying() => LoadDaily(ref _dailyTimePlaying, nameof(_dailyTimePlaying)).Progress;
 
     private static void SaveWeaponsSelected(TFG.Generic.Dictionary<Name, WeaponAttachmentSelected> weapons)
     {
@@ -653,6 +674,51 @@ public static class Progress
         return JsonUtility.ToJson(dict);
     }
 
+    private static void SaveDaily(ref DailyProgress dailyProgress, string tagForSave, int value)
+    {
+        if (dailyProgress == null)
+        {
+            var daily = LoadDaily(ref dailyProgress, tagForSave);
+            var dayTime = GS_Server.Time().DayOfYear;
+            if (daily.DayOfYear == dayTime)
+            {
+                daily.Progress += value;
+                dailyProgress = daily;
+            }
+            else
+            {
+                daily.Progress = value;
+                daily.DayOfYear = dayTime;
+                dailyProgress = daily;
+            }
+        }
+        else
+        {
+            dailyProgress.Progress += value;
+        }
+        GSPrefs.SetString(tagForSave, JsonUtility.ToJson(dailyProgress));
+        GSPrefs.Save();
+    }
+    private static DailyProgress LoadDaily(ref DailyProgress dailyProgress, string tagForSave)
+    {
+        if (dailyProgress == null)
+        {
+            dailyProgress = JsonUtility.FromJson<DailyProgress>(GSPrefs.GetString(tagForSave, GetDefaultDailyQuestJSON()));
+            var dayTime = GS_Server.Time().DayOfYear;
+            if (dailyProgress.DayOfYear != dayTime)
+            {
+                dailyProgress.Progress = 0;
+                dailyProgress.DayOfYear = dayTime;
+            }
+        }
+        return dailyProgress;
+    }
+
+    private static string GetDefaultDailyQuestJSON()
+    {
+        return JsonUtility.ToJson(new DailyProgress() { DayOfYear = GS_Server.Time().DayOfYear, Progress = 0 });
+    }
+
     [Serializable]
     private class WeaponAttachmentSelected
     {
@@ -679,5 +745,11 @@ public static class Progress
     private class SkinsPlayerBought
     {
         public List<string> Name;
+    }
+
+    private class DailyProgress
+    {
+        public int Progress;
+        public int DayOfYear;
     }
 }

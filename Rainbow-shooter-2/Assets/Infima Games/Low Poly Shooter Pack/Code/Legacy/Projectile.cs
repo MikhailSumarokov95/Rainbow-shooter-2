@@ -38,8 +38,6 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 
 			//Start destroy timer
 			StartCoroutine(DestroyAfter());
-
-			print("Damage: " + Damage);
 		}
 
 		public void IncreaseDamageByPercentage(int percentage) => damage = (damage + ((damage * percentage) / 100));
