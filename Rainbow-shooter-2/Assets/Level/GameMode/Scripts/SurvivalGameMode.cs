@@ -1,10 +1,13 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static SpawnerBots;
+using static Spawner;
 
 public class SurvivalGameMode : GameMode
 {
+    [Title(label: "Survival")]
+    [SerializeField] private SpawnObjParameters spawnMedicineChest;
+    [SerializeField] private SpawnObjParameters spawnAmmunition;
     [SerializeField] private int plusEnemyWithWave = 1;
     [SerializeField] private int howManyWavesSpawnBoss = 5;
     [SerializeField] private TMP_Text countKilledEnemyText;
@@ -23,6 +26,8 @@ public class SurvivalGameMode : GameMode
         SignOnKillEventEnemy(currentEnemyLife);
         _countKilledEnemyForWave = 0;
         _waveEnd = false;
+        SpawnObject(spawnMedicineChest);
+        SpawnObject(spawnAmmunition);
     }
 
     protected override void IncrementCountKilled()

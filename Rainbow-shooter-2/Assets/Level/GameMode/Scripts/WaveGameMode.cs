@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static SpawnerBots;
+using static Spawner;
 
 public class WaveGameMode : GameMode
 {
+    [Title(label: "Wave")]
     [SerializeField] private float plusEnemyWithLevel = 1;
     [SerializeField] private int howManyLevelsSpawnBoss = 5;
 

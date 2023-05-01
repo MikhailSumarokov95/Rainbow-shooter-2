@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
-using static SpawnerBots;
+using static Spawner;
 
 public abstract class GameMode : MonoBehaviour
 {
@@ -9,6 +9,7 @@ public abstract class GameMode : MonoBehaviour
     public static Action<Life[]> OnSpawnedEnemies;
     public static Action OnWavesOver;
     public static Action OnWaveEnd;
+    [Title(label: "Generals")]
     [SerializeField] protected SpawnBot[] spawnBots;
     [SerializeField] protected SpawnBot[] spawnBoss;
     [SerializeField] protected int delayAfterEndWave = 2;

@@ -3,7 +3,7 @@ using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
 
-public class SpawnerBots : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     public static List<Life> SpawnEnemies(SpawnBot[] spawnEnemy)
     {
@@ -22,10 +22,30 @@ public class SpawnerBots : MonoBehaviour
         return enemy;
     }
 
+    public static List<GameObject> SpawnObject(SpawnObjParameters spawnObject)
+    {
+        var obj = new List<GameObject>();
+        for (var i = 0; i < spawnObject.Count; i++)
+        {
+            var numberSpawnPoint = Random.Range(0, spawnObject.SpawnPoints.Length);
+            var spawnPoint = spawnObject.SpawnPoints[numberSpawnPoint];
+            obj.Add(Instantiate(spawnObject.ObjectPrefs, spawnPoint.position, spawnPoint.rotation));
+        }
+        return obj;
+    }
+
     [Serializable]
     public class SpawnBot
     {
         public Life BotPrefs;
+        public int Count;
+        public Transform[] SpawnPoints;
+    }
+
+    [Serializable]
+    public class SpawnObjParameters
+    {
+        public GameObject ObjectPrefs;
         public int Count;
         public Transform[] SpawnPoints;
     }
