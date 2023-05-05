@@ -67,7 +67,7 @@ public class SkinsShop : MonoBehaviour, IShopPurchase
                     GSConnect.Purchase(GSConnect.PurchaseTag.Hat, this);
                     break;
                 case "Tiger":
-                    GSConnect.Purchase(GSConnect.PurchaseTag.Hat, this);
+                    GSConnect.Purchase(GSConnect.PurchaseTag.Tiger, this);
                     break;
             }
         }
