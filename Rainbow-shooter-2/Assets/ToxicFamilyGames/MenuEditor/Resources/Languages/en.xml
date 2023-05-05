@@ -29,7 +29,7 @@
 	<text id="EndWave">End Wave</text>
 	<text id="PerAd">PerAd</text>
 	<text id="Continue?">Continue?</text>
-	<text id="PriceBattlePass">Price: 49YAN</text>
+	<text id="PriceBattlePass">49 YAN</text>
 	<text id="Damage">Damage: </text>
 	<text id="wave">Wave</text>
 	<text id="takeTheBestWeapon">Take the best weapon</text>
@@ -55,9 +55,9 @@
 	<text id="BuySparePart">Buy Spare Part for 19YAN</text>
 	<text id="FlyOffThePlanet">Fly off the planet</text>
 	<text id="InstallSparePart">Install Spare Part</text>
-	<text id="PriceKit1">100YAN</text>
-	<text id="PriceKit2">150YAN</text>
-	<text id="PriceKitAll">200YAN</text>
+	<text id="PriceKit1">100 YAN</text>
+	<text id="PriceKit2">150 YAN</text>
+	<text id="PriceKitAll">200 YAN</text>
 	<text id="KitAllDescription">
 All weapons
 All skins
@@ -67,4 +67,6 @@ Battlepass
 	<text id="Guide2">You have a weapon to destroy, be careful the ammo is not infinite</text>
 	<text id="Guide3">Hurry up, grab the ship part and run to the base</text>
 	<text id="AllKilled">You killed them all! Get back to base!</text>
+	<text id="Сompleted">Сompleted</text>
+	<text id="DailyQuest">Daily Quest</text>
 </text>

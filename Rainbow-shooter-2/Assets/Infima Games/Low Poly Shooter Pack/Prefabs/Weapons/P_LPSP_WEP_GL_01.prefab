@@ -352,7 +352,7 @@ MonoBehaviour:
   - {fileID: 2321721333428727561}
   - {fileID: 5538520901829697634}
   - {fileID: 858539034726692479}
-  muzzleIndex: 1
+  muzzleIndex: 0
   muzzleIndexRandom: 0
   muzzleArray:
   - {fileID: 5389620587445267931}

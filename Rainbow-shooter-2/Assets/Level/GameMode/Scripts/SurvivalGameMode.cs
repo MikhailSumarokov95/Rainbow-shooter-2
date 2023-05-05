@@ -13,6 +13,11 @@ public class SurvivalGameMode : GameMode
     [SerializeField] private TMP_Text countKilledEnemyText;
     private int _countKilledEnemy = 0;
 
+    private void Start()
+    {
+        countKilledEnemyText.text = 0.ToString();
+    }
+
     public override void StartNewWave()
     {
         NumberWave++;

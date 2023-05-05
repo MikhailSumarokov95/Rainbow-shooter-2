@@ -215,7 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scopeDefaultShow: 1
   scopeDefaultBehaviour: {fileID: 6669946894562304350}
-  scopeIndex: -1
+  scopeIndex: 0
   scopeIndexFirst: -1
   scopeIndexRandom: 0
   scopeArray: []
@@ -223,12 +223,12 @@ MonoBehaviour:
   muzzleIndexRandom: 0
   muzzleArray:
   - {fileID: 1201910349185342244}
-  laserIndex: -1
+  laserIndex: 0
   laserIndexRandom: 0
   laserArray:
   - {fileID: 3808128651002874644}
   - {fileID: 1345146842971145014}
-  gripIndex: -1
+  gripIndex: 0
   gripIndexRandom: 0
   gripArray:
   - {fileID: 8020667259999144056}

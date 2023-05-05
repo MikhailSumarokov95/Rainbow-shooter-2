@@ -20,6 +20,7 @@ TagManager:
   - Medicine Chest
   - FxTemporaire
   - PartSpaceShip
+  - Ammunition
   layers:
   - Default
   - TransparentFX

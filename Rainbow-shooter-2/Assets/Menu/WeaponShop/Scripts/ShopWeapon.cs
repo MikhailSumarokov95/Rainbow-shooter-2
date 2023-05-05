@@ -7,6 +7,7 @@ public class ShopWeapon : MonoBehaviour, IShopPurchase
     [SerializeField] private WeaponBehaviour.Name nameWeapon;
     [SerializeField] private Image buyWeaponImage;
     [SerializeField] private Image boughtWeaponImage;
+    [SerializeField] private GameObject shopWeaponPanel;
 
     private void OnEnable()
     {
@@ -46,7 +47,7 @@ public class ShopWeapon : MonoBehaviour, IShopPurchase
         var shopAttachment = FindObjectOfType<ShopAttachment>(true);
         shopAttachment.gameObject.SetActive(true);
         shopAttachment.StartInitWeapons(nameWeapon);
-        transform.parent.gameObject.SetActive(false);
+        shopWeaponPanel.SetActive(false);
     }
 
     private void InitShop()

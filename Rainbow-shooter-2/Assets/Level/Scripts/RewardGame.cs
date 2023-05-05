@@ -29,6 +29,7 @@ public class RewardGame : MonoBehaviour
 
     public void TryRewardDoubleMoney()
     {
+        doubleRewardButton.gameObject.SetActive(false);
         GSConnect.ShowRewardedAd(GSConnect.DoubleMoneyReward);
     }
 }

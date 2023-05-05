@@ -29,7 +29,7 @@
   <text id="EndWave">Конец волны</text>
   <text id="PerAd">За рекламу</text>
   <text id="Continue?">Продолжить?</text>
-  <text id="PriceBattlePass">Стоимость: 49ЯН</text>
+  <text id="PriceBattlePass">49 ЯН</text>
   <text id="Damage">Урон: </text>
   <text id="wave">Волна</text>
   <text id="takeTheBestWeapon">Возьми лучшее оружие</text>
@@ -55,9 +55,9 @@
   <text id="BuySparePart">Купить запчасть за 19ЯН</text>
   <text id="FlyOffThePlanet">Улететь с планеты</text>
   <text id="InstallSparePart">Установить запчасть</text>
-  <text id="PriceKit1">100ЯИ</text>
-  <text id="PriceKit2">150ЯИ</text>
-  <text id="PriceKitAll">200ЯИ</text>
+  <text id="PriceKit1">100 ЯИ</text>
+  <text id="PriceKit2">150 ЯИ</text>
+  <text id="PriceKitAll">200 ЯИ</text>
   <text id="KitAllDescription">
 Всё оружие
 Все скины
@@ -67,4 +67,6 @@
   <text id="Guide2">Для уничтожения у тебя есть оружие, будь аккуратен патроны не бесконечны</text>
   <text id="Guide3">Скорее забирай запчасть от корабля и беги на базу</text>
   <text id="AllKilled">Ты убил их всех! Возвращайся на базу!</text>
+  <text id="Сompleted">Выполнено</text>
+  <text id="DailyQuest">Ежедневные задания</text>
 </texts>

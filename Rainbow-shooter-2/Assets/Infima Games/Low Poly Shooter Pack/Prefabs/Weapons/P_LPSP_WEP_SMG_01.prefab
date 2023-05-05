@@ -383,19 +383,19 @@ MonoBehaviour:
   - {fileID: 6759154247564090539}
   - {fileID: 3542636154156536768}
   - {fileID: 8511551569725392349}
-  muzzleIndex: 1
+  muzzleIndex: 0
   muzzleIndexRandom: 0
   muzzleArray:
   - {fileID: 8002980094126972946}
   - {fileID: 863918887610361177}
   - {fileID: 6638684505885756565}
   - {fileID: 6952686933382682844}
-  laserIndex: 0
+  laserIndex: -1
   laserIndexRandom: 0
   laserArray:
   - {fileID: 3630894888444754565}
   - {fileID: 1445757255114617511}
-  gripIndex: 0
+  gripIndex: -1
   gripIndexRandom: 0
   gripArray:
   - {fileID: 7433630473462786162}

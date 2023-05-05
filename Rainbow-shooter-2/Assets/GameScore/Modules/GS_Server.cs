@@ -8,6 +8,10 @@ namespace GameScore
         [DllImport("__Internal")]
         private static extern string GSServerTime();
 
-        public static DateTime Time() => DateTime.Parse(GSServerTime(), System.Globalization.CultureInfo.InvariantCulture);
+        public static DateTime Time()
+        {
+            if (Application.isEditor) return DateTime.Now;
+            else return DateTime.Parse(GSServerTime(), System.Globalization.CultureInfo.InvariantCulture);
+        }
     }
 }

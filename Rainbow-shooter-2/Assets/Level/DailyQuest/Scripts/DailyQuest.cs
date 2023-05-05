@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class DailyQuest : MonoBehaviour
 {
-    public static DailyQuest Instance;
-    private CharacterBehaviour _characterBehaviour;
-    private static float _timerPlaying;
-    const float ONE_MINUTE = 60;
     public enum Name
     {
         Kill,
@@ -15,8 +11,16 @@ public class DailyQuest : MonoBehaviour
         TimePlaying
     }
 
+    const float ONE_MINUTE = 60;
+    public static DailyQuest Instance;
+    private CharacterBehaviour _characterBehaviour;
+    private static float _timerPlaying;
+
+    [SerializeField] private SerializedDictionary<Name, int> targetValue;
+    public SerializedDictionary<Name, int> TargetValue { get { return targetValue; } }
+
     public static Dictionary<Name, int> DailyProgress { get; private set; } = 
-        new Dictionary<Name, int>() { { Name.Kill , 0 }, { Name.Grenade, 0 }, { Name.TimePlaying, 0 } };
+        new Dictionary<Name, int>() { { Name.Kill, 0 }, { Name.Grenade, 0 }, { Name.TimePlaying, 0 } };
 
     private void OnEnable()
     {
@@ -60,18 +64,21 @@ public class DailyQuest : MonoBehaviour
 
     private void IncrementProgressKill()
     {
+        if (Progress.GetDailyKill() > targetValue[Name.Kill]) return;
         Progress.SaveDailyKill(1);
-        DailyProgress[Name.Kill]++; 
+        DailyProgress[Name.Kill]++;
     } 
 
     private void IncrementProgressGrenade()
     {
+        if (Progress.GetDailyKill() > targetValue[Name.Grenade]) return;
         Progress.SaveDailyGrenade(1);
         DailyProgress[Name.Grenade]++; 
     }
     
     private void IncrementProgressTimePlaying()
     {
+        if (Progress.GetDailyKill() > targetValue[Name.TimePlaying]) return;
         Progress.SaveDailyTimePlaying(1);
         DailyProgress[Name.TimePlaying]++; 
     }

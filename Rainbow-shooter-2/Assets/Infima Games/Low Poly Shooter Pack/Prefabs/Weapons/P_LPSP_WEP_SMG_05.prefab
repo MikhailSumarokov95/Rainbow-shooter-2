@@ -440,7 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scopeDefaultShow: 1
   scopeDefaultBehaviour: {fileID: 1768893052792850498}
-  scopeIndex: -1
+  scopeIndex: 0
   scopeIndexFirst: -1
   scopeIndexRandom: 0
   scopeArray:
@@ -452,7 +452,7 @@ MonoBehaviour:
   - {fileID: 140989120418911636}
   - {fileID: 7858863751445224191}
   - {fileID: 3037301021711027426}
-  muzzleIndex: 1
+  muzzleIndex: 0
   muzzleIndexRandom: 0
   muzzleArray:
   - {fileID: 327595784648957356}

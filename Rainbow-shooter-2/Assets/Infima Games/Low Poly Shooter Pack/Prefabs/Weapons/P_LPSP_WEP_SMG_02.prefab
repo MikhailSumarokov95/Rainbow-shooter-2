@@ -571,7 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scopeDefaultShow: 1
   scopeDefaultBehaviour: {fileID: 6681307218742655879}
-  scopeIndex: -1
+  scopeIndex: 3
   scopeIndexFirst: -1
   scopeIndexRandom: 0
   scopeArray:

@@ -246,7 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scopeDefaultShow: 1
   scopeDefaultBehaviour: {fileID: 4175217260029434074}
-  scopeIndex: -1
+  scopeIndex: 1
   scopeIndexFirst: -1
   scopeIndexRandom: 0
   scopeArray:
@@ -258,14 +258,14 @@ MonoBehaviour:
   - {fileID: 678160916147350265}
   - {fileID: 7317753358768514450}
   - {fileID: 2502596452765922191}
-  muzzleIndex: 2
+  muzzleIndex: 0
   muzzleIndexRandom: 0
   muzzleArray:
   - {fileID: 1106376868149417405}
   - {fileID: 7761859118619463926}
   - {fileID: 4353767505601329466}
   - {fileID: 15217197743009139}
-  laserIndex: 0
+  laserIndex: 1
   laserIndexRandom: 0
   laserArray:
   - {fileID: 1230793423412612628}
