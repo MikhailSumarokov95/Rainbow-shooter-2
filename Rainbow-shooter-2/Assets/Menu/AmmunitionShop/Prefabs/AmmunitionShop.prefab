@@ -147,44 +147,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd9d1d3da35fed45a02647f8c2027b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 500
+  price: 100
   _maxAmmunitionWeapon:
-  - NameWeapon: Assault Rifle 02
-    Count: 96
-  - NameWeapon: Assault Rifle 03
-    Count: 75
-  - NameWeapon: Grenade Launcher 01
-    Count: 3
-  - NameWeapon: Handgun 02
-    Count: 30
-  - NameWeapon: Handgun 03
-    Count: 30
-  - NameWeapon: Handgun 04
-    Count: 30
-  - NameWeapon: Rocket Launcher 01
-    Count: 3
-  - NameWeapon: Shotgun 01
+  - NameWeapon: 1
+    Count: 192
+  - NameWeapon: 2
+    Count: 150
+  - NameWeapon: 3
+    Count: 6
+  - NameWeapon: 5
+    Count: 60
+  - NameWeapon: 6
+    Count: 60
+  - NameWeapon: 7
+    Count: 60
+  - NameWeapon: 8
+    Count: 6
+  - NameWeapon: 9
+    Count: 48
+  - NameWeapon: 10
+    Count: 222
+  - NameWeapon: 11
+    Count: 180
+  - NameWeapon: 12
+    Count: 230
+  - NameWeapon: 13
+    Count: 324
+  - NameWeapon: 14
+    Count: 192
+  - NameWeapon: 15
+    Count: 42
+  - NameWeapon: 16
+    Count: 54
+  - NameWeapon: 17
+    Count: 48
+  - NameWeapon: 4
     Count: 24
-  - NameWeapon: SMG 01
-    Count: 111
-  - NameWeapon: SMG 02
-    Count: 90
-  - NameWeapon: SMG 03
-    Count: 115
-  - NameWeapon: SMG 04
-    Count: 162
-  - NameWeapon: SMG 05
-    Count: 96
-  - NameWeapon: Sniper 01
-    Count: 21
-  - NameWeapon: Sniper 02
-    Count: 27
-  - NameWeapon: Sniper 03
-    Count: 24
-  - NameWeapon: Handgun 01
-    Count: 12
-  - NameWeapon: Assault Rifle 01
-    Count: 30
+  - NameWeapon: 0
+    Count: 60
 --- !u!1 &8060033582623698763
 GameObject:
   m_ObjectHideFlags: 0
