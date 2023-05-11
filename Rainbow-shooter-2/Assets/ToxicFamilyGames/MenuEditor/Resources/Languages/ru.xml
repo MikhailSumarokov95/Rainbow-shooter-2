@@ -69,4 +69,6 @@
   <text id="AllKilled">Ты убил их всех! Возвращайся на базу!</text>
   <text id="Сompleted">Выполнено</text>
   <text id="DailyQuest">Ежедневные задания</text>
+  <text id="GRENADE">Граната</text>
+  <text id="SUPERGRENADE">Супер граната</text>
 </texts>
