@@ -15,7 +15,7 @@ C:/Users/Mikhail/Desktop/Unity/Rainbow-shooter-2/Rainbow-shooter-2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51718
+64690
 Successfully changed project path to: C:/Users/Mikhail/Desktop/Unity/Rainbow-shooter-2/Rainbow-shooter-2
 C:/Users/Mikhail/Desktop/Unity/Rainbow-shooter-2/Rainbow-shooter-2
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/Mikhail/Desktop/Unity/Rainbow-shooter-2/Rainbow-shooter-2
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [11656] Host "[IP] 192.168.1.7 [Port] 0 [Flags] 2 [Guid] 3315423395 [EditorId] 3315423395 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-QCT10TA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [17956] Host "[IP] 192.168.1.7 [Port] 0 [Flags] 2 [Guid] 565066639 [EditorId] 565066639 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-QCT10TA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [11656] Host "[IP] 192.168.1.7 [Port] 0 [Flags] 2 [Guid] 3315423395 [EditorId] 3315423395 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-QCT10TA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [17956] Host "[IP] 192.168.1.7 [Port] 0 [Flags] 2 [Guid] 565066639 [EditorId] 565066639 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-QCT10TA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 226.25 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 237.30 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.18f1 (3129e69bc0c7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -67,366 +67,96 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56920
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56224
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007831 seconds.
+Registered in 0.009454 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 180 ms
+Android Extension - Scanning For ADB Devices 185 ms
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 212.43 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 215.92 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.917 seconds
+- Completed reload, in  0.943 seconds
 Domain Reload Profiling:
-	ReloadAssembly (917ms)
-		BeginReloadAssembly (61ms)
+	ReloadAssembly (943ms)
+		BeginReloadAssembly (69ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (751ms)
-			LoadAssemblies (60ms)
+		EndReloadAssembly (764ms)
+			LoadAssemblies (67ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (103ms)
+			SetupTypeCache (104ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (574ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (584ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (239ms)
+				InitializePlatformSupportModulesInManaged (247ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (212ms)
+				RefreshPlugins (216ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (81ms)
-				ProcessInitializeOnLoadMethodAttributes (40ms)
+				ProcessInitializeOnLoadAttributes (82ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007778 seconds.
+Registered in 0.008820 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 211.88 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 222.08 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.419 seconds
+- Completed reload, in  1.519 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1420ms)
-		BeginReloadAssembly (93ms)
+	ReloadAssembly (1520ms)
+		BeginReloadAssembly (98ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (1219ms)
-			LoadAssemblies (83ms)
+		EndReloadAssembly (1307ms)
+			LoadAssemblies (86ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (298ms)
+			SetupTypeCache (309ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (56ms)
-			SetupLoadedEditorAssemblies (733ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (785ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
+				InitializePlatformSupportModulesInManaged (17ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (212ms)
-				BeforeProcessingInitializeOnLoad (102ms)
-				ProcessInitializeOnLoadAttributes (292ms)
-				ProcessInitializeOnLoadMethodAttributes (104ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 2.21 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4830 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 39 unused Assets / (30.2 KB). Loaded Objects now: 5326.
-Memory consumption went from 286.6 MB to 286.5 MB.
-Total: 3.393100 ms (FindLiveObjects: 0.348100 ms CreateObjectMapping: 0.227300 ms MarkObjects: 2.788600 ms  DeleteObjects: 0.028300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 73832.181531 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a49af07cb1123647d4d9254e9e5f36b4') in 0.179337 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.242940 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48d33ed5495922745dd466adef396cee') in 0.028912 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 27.952151 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3cc217a00f8dd09cfe4902e3b65fbf6') in 0.019828 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.268787 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1abe5c6d879b87d3b8eeef27742d3ca4') in 0.020685 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 18.277291 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60ab133faea9507cf3fe92e930cf4c47') in 0.061619 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007443 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.28 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.203 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1204ms)
-		BeginReloadAssembly (134ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (38ms)
-		EndReloadAssembly (969ms)
-			LoadAssemblies (96ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (307ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (485ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (25ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (81ms)
-				ProcessInitializeOnLoadAttributes (231ms)
-				ProcessInitializeOnLoadMethodAttributes (138ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.24 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4792 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 31 unused Assets / (24.7 KB). Loaded Objects now: 5341.
-Memory consumption went from 303.8 MB to 303.7 MB.
-Total: 3.300500 ms (FindLiveObjects: 0.317000 ms CreateObjectMapping: 0.253100 ms MarkObjects: 2.680500 ms  DeleteObjects: 0.049100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 89.697364 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52ebbe41afd238f7983e5229a582b657') in 0.130130 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 28.714230 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bcdaf9337a8bcf404d6843f3e099507') in 0.033640 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 55.554441 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfb97c66ea955a2532f6335feae4be0a') in 0.109155 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.899380 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aafac9fb8fc922da8c0689904c2b237') in 0.060291 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.346580 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ed50d34408e598130e3fd1e7089f885') in 0.030929 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.602035 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fce3734e7e786e5ff7a2a3d1aaebdc39') in 0.031348 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.180354 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '766d24aceacbe7f79000d534814e8dd8') in 0.032331 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.997331 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '792dff35511daf6d4c50e47d8e8e2215') in 0.031658 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.546565 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'affbffb809c4e3484cdf2ba939a9be3f') in 0.032928 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007522 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.24 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.146 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1146ms)
-		BeginReloadAssembly (129ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (37ms)
-		EndReloadAssembly (917ms)
-			LoadAssemblies (87ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (278ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (459ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (24ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (78ms)
-				ProcessInitializeOnLoadAttributes (216ms)
-				ProcessInitializeOnLoadMethodAttributes (131ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.18 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4792 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 31 unused Assets / (25.6 KB). Loaded Objects now: 5344.
-Memory consumption went from 303.5 MB to 303.5 MB.
-Total: 3.342200 ms (FindLiveObjects: 0.317100 ms CreateObjectMapping: 0.193600 ms MarkObjects: 2.808200 ms  DeleteObjects: 0.022500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 120.159355 seconds.
-  path: Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/ru.xml
-  artifactKey: Guid(f9123dfb6fd698941b2d8c7ea9040f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/ru.xml using Guid(f9123dfb6fd698941b2d8c7ea9040f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ba27fa4f13a68639466dee2efcc5d55') in 0.026915 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 22.239455 seconds.
-  path: Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/ru.xml
-  artifactKey: Guid(f9123dfb6fd698941b2d8c7ea9040f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/ru.xml using Guid(f9123dfb6fd698941b2d8c7ea9040f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9aa6ec95cd63502fa77fa7b5610dff49') in 0.002742 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007387 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 3.07 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.292 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1293ms)
-		BeginReloadAssembly (135ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (40ms)
-		EndReloadAssembly (1048ms)
-			LoadAssemblies (91ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (311ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (557ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (26ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (83ms)
-				ProcessInitializeOnLoadAttributes (265ms)
-				ProcessInitializeOnLoadMethodAttributes (169ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				RefreshPlugins (222ms)
+				BeforeProcessingInitializeOnLoad (113ms)
+				ProcessInitializeOnLoadAttributes (316ms)
+				ProcessInitializeOnLoadMethodAttributes (109ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 5.26 ms, found 3 plugins.
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 2.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4792 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 31 unused Assets / (24.7 KB). Loaded Objects now: 5347.
-Memory consumption went from 303.6 MB to 303.5 MB.
-Total: 3.850100 ms (FindLiveObjects: 0.410900 ms CreateObjectMapping: 0.353500 ms MarkObjects: 3.057800 ms  DeleteObjects: 0.027000 ms)
+Unloading 4830 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 39 unused Assets / (30.2 KB). Loaded Objects now: 5326.
+Memory consumption went from 286.6 MB to 286.6 MB.
+Total: 3.551100 ms (FindLiveObjects: 0.346800 ms CreateObjectMapping: 0.229700 ms MarkObjects: 2.944600 ms  DeleteObjects: 0.028600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -440,122 +170,84 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 38.253719 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab
-  artifactKey: Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_01.prefab using Guid(7b04fe350ed10a741a1e245447860d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c395183235bac0c0b68259009c5155ce') in 0.110642 seconds 
+  Time since last request: 595678.656783 seconds.
+  path: Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/ru.xml
+  artifactKey: Guid(f9123dfb6fd698941b2d8c7ea9040f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/ru.xml using Guid(f9123dfb6fd698941b2d8c7ea9040f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e7cf638a319d263eaa3ccb3f0073bde') in 0.029952 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.080238 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_GL.prefab
-  artifactKey: Guid(edf8c9b19ab77cd458707a7f9b3d825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_GL.prefab using Guid(edf8c9b19ab77cd458707a7f9b3d825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4684506d3701f31dc732c613cd0369f2') in 0.026435 seconds 
+  Time since last request: 4.628070 seconds.
+  path: Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/en.xml
+  artifactKey: Guid(25fbb601f8c90484785de00072418321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/en.xml using Guid(25fbb601f8c90484785de00072418321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55aa7a14d15338b08b0a30cd1b56203d') in 0.002412 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.756706 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_GL.prefab
-  artifactKey: Guid(edf8c9b19ab77cd458707a7f9b3d825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_GL.prefab using Guid(edf8c9b19ab77cd458707a7f9b3d825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a757ca0d6d74cf998dcbc5655f7fb5b3') in 0.038514 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.195079 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_GL.prefab
-  artifactKey: Guid(edf8c9b19ab77cd458707a7f9b3d825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_GL.prefab using Guid(edf8c9b19ab77cd458707a7f9b3d825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca46c1987d16d4d211692d16ab08c770') in 0.028841 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.844241 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_GL.prefab
-  artifactKey: Guid(edf8c9b19ab77cd458707a7f9b3d825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_GL.prefab using Guid(edf8c9b19ab77cd458707a7f9b3d825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58688e541616d76dff048d8701066818') in 0.032406 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 25.283248 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_02.prefab
-  artifactKey: Guid(bd6c55fdcdaebf848917e31fbcc88cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_02.prefab using Guid(bd6c55fdcdaebf848917e31fbcc88cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49ecaa3ebd150167ce23fae44058bace') in 0.067074 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.213500 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_02.prefab
-  artifactKey: Guid(bd6c55fdcdaebf848917e31fbcc88cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_02.prefab using Guid(bd6c55fdcdaebf848917e31fbcc88cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2d50e689835ea344472fda53667df1e') in 0.016311 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.269440 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_02.prefab
-  artifactKey: Guid(bd6c55fdcdaebf848917e31fbcc88cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_02.prefab using Guid(bd6c55fdcdaebf848917e31fbcc88cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '764e09ba4a8e5ceecd82bef137a1c336') in 0.039451 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.497246 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab
-  artifactKey: Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab using Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2ccde43b8b27063d71694e89c70eefa') in 0.031560 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.836206 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab
-  artifactKey: Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab using Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5baf1bc5d37acb63d7ab38c3a4d157d9') in 0.040969 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 38.436185 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_GL.prefab
-  artifactKey: Guid(edf8c9b19ab77cd458707a7f9b3d825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_GL.prefab using Guid(edf8c9b19ab77cd458707a7f9b3d825d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ad8ee9b0f98b7270e5ebd5c489f9aaa') in 0.037842 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.724155 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_02.prefab
-  artifactKey: Guid(bd6c55fdcdaebf848917e31fbcc88cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_Grenade_02.prefab using Guid(bd6c55fdcdaebf848917e31fbcc88cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92d491a8bc790ff12f01893484f1266d') in 0.036449 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.279016 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab
-  artifactKey: Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab using Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5ddbea329189b8c7358e0f9a65fa079') in 0.032984 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.636868 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab
-  artifactKey: Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab using Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b0c89c451a4bd09da84d38e12d53c79') in 0.033049 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.840547 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab
-  artifactKey: Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab using Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa3863587e7ca37341ac443f509105d') in 0.035291 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.650406 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab
-  artifactKey: Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab using Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0953a86d22966e6f4590ce5b49b43325') in 0.034047 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.924371 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab
-  artifactKey: Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab using Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f50cc1eafd3999a32c406cb4ed5de1a') in 0.033131 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.762203 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab
-  artifactKey: Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab using Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcbd946232e5b6b541091e26f32965b1') in 0.034182 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.398936 seconds.
-  path: Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab
-  artifactKey: Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Projectiles/P_LPSP_PROJ_SuperGrenade.prefab using Guid(9a2bd76ae78d6524885baddfb2d4a4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cea4ddd2ad9b25f3c73ad2af033e59e') in 0.035281 seconds 
+  Time since last request: 11.215802 seconds.
+  path: Assets/Scenes/GSLoader.unity
+  artifactKey: Guid(488c749ca8ae15e4bbe20ab148307a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GSLoader.unity using Guid(488c749ca8ae15e4bbe20ab148307a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a3d721c57560d528dc1841b41576f6f') in 0.002203 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007359 seconds.
+Registered in 0.008217 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.143 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1143ms)
+		BeginReloadAssembly (124ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (924ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (286ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (468ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (216ms)
+				ProcessInitializeOnLoadMethodAttributes (134ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4792 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 31 unused Assets / (25.6 KB). Loaded Objects now: 5330.
+Memory consumption went from 299.5 MB to 299.5 MB.
+Total: 3.409000 ms (FindLiveObjects: 0.311900 ms CreateObjectMapping: 0.221400 ms MarkObjects: 2.852900 ms  DeleteObjects: 0.022100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008117 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -565,40 +257,110 @@ Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 2.25 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.132 seconds
+- Completed reload, in  1.151 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1133ms)
-		BeginReloadAssembly (126ms)
+	ReloadAssembly (1151ms)
+		BeginReloadAssembly (133ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (37ms)
-		EndReloadAssembly (911ms)
-			LoadAssemblies (85ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (921ms)
+			LoadAssemblies (90ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (284ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (453ms)
+			SetupTypeCache (286ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (459ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (25ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (77ms)
-				ProcessInitializeOnLoadAttributes (212ms)
-				ProcessInitializeOnLoadMethodAttributes (129ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (216ms)
+				ProcessInitializeOnLoadMethodAttributes (126ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 5.04 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.37 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4792 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 31 unused Assets / (25.7 KB). Loaded Objects now: 5350.
-Memory consumption went from 303.9 MB to 303.9 MB.
-Total: 3.344500 ms (FindLiveObjects: 0.362000 ms CreateObjectMapping: 0.310800 ms MarkObjects: 2.641700 ms  DeleteObjects: 0.029100 ms)
+Unloading 31 unused Assets / (24.6 KB). Loaded Objects now: 5333.
+Memory consumption went from 299.5 MB to 299.5 MB.
+Total: 3.435600 ms (FindLiveObjects: 0.319200 ms CreateObjectMapping: 0.226200 ms MarkObjects: 2.861300 ms  DeleteObjects: 0.028000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 341.794523 seconds.
+  path: Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/ru.xml
+  artifactKey: Guid(f9123dfb6fd698941b2d8c7ea9040f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/ru.xml using Guid(f9123dfb6fd698941b2d8c7ea9040f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f30bd51c2ad839920c694afc71b71f1') in 0.022400 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 75.444898 seconds.
+  path: Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/en.xml
+  artifactKey: Guid(25fbb601f8c90484785de00072418321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToxicFamilyGames/MenuEditor/Resources/Languages/en.xml using Guid(25fbb601f8c90484785de00072418321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e8ae80ba29cf8a8dcf2a9fc11c14c45') in 0.001913 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008556 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Mikhail\Desktop\Unity\Rainbow-shooter-2\Rainbow-shooter-2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.143 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1143ms)
+		BeginReloadAssembly (135ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (913ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (273ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (463ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (218ms)
+				ProcessInitializeOnLoadMethodAttributes (131ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4792 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 31 unused Assets / (24.7 KB). Loaded Objects now: 5336.
+Memory consumption went from 299.5 MB to 299.5 MB.
+Total: 3.074400 ms (FindLiveObjects: 0.328400 ms CreateObjectMapping: 0.255500 ms MarkObjects: 2.467100 ms  DeleteObjects: 0.022800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 

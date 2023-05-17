@@ -5694,6 +5694,7 @@ GameObject:
   - component: {fileID: 1090556789}
   - component: {fileID: 1090556791}
   - component: {fileID: 1090556790}
+  - component: {fileID: 1090556792}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5819,6 +5820,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090556788}
   m_CullTransparentMesh: 1
+--- !u!114 &1090556792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090556788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0779fdcfc4ade214a84512b568669f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Go Wave
 --- !u!224 &1091153377 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5100711377283473619, guid: 0f276dc90dcb03a4a9f8a0d4365bf7fc,
@@ -10309,6 +10323,7 @@ GameObject:
   - component: {fileID: 1836954978}
   - component: {fileID: 1836954980}
   - component: {fileID: 1836954979}
+  - component: {fileID: 1836954981}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -10434,6 +10449,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836954977}
   m_CullTransparentMesh: 1
+--- !u!114 &1836954981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836954977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0779fdcfc4ade214a84512b568669f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Survival
 --- !u!1 &1858240526 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 160394, guid: 998ad100d4990e64fa392a818adf1a8c,

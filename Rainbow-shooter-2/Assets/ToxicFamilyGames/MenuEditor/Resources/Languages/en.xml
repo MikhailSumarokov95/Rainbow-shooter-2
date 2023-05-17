@@ -71,4 +71,6 @@ Battlepass
 	<text id="DailyQuest">Daily Quest</text>
 	<text id="GRENADE">Grenade</text>
 	<text id="SUPERGRENADE">Supergrenade</text>
+	<text id="Go Wave">Regular game</text>
+	<text id="Survival">Survival</text>
 </text>

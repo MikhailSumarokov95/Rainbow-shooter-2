@@ -71,4 +71,6 @@
   <text id="DailyQuest">Ежедневные задания</text>
   <text id="GRENADE">Граната</text>
   <text id="SUPERGRENADE">Супер граната</text>
+  <text id="Go Wave">Обычная игра</text>
+  <text id="Survival">Выживание</text>
 </texts>
