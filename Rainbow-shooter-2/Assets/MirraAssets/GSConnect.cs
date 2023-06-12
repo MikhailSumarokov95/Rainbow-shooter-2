@@ -221,6 +221,7 @@ public class GSConnect : MonoBehaviour {
     }
 
     void OnRewardedClosed(bool success) {
+        _isRewardedStarted = false;
         Pause = false;
     }
 
