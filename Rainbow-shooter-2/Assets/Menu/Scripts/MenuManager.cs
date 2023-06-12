@@ -1,6 +1,5 @@
 using UnityEngine;
 using GameScore;
-using InfimaGames.LowPolyShooterPack;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour

@@ -5832,7 +5832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0779fdcfc4ade214a84512b568669f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: Go Wave
+  id: GoWave
 --- !u!224 &1091153377 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5100711377283473619, guid: 0f276dc90dcb03a4a9f8a0d4365bf7fc,
